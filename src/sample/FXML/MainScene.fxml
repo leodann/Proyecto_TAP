@@ -46,12 +46,12 @@
                 </HBox>
                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
                     <children>
-                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #1194ab;" text="NEXT 7 DAYS" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="113.0" style="-fx-background-color: #1194ab;" text="NEXT 7 DAYS" textFill="WHITE">
                             <font>
-                                <Font name="HP Simplified" size="11.0" />
+                                <Font name="HP Simplified" size="10.0" />
                             </font>
                         </JFXButton>
-                        <JFXButton mnemonicParsing="false" prefHeight="26.0" prefWidth="23.0" text="">
+                        <JFXButton mnemonicParsing="false" prefHeight="26.0" prefWidth="22.0" text="">
                             <graphic>
                                 <MaterialDesignIconView fill="darkslategrey" glyphName="PLUS" glyphSize="15" />
                             </graphic>
