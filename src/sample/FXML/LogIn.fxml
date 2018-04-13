@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.text.Font?>
-<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.LogIn">
     <children>
         <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="40.0" prefWidth="608.0" text="TaskManager" textAlignment="CENTER" textFill="#1194ab">
@@ -36,11 +33,10 @@
                 <Font name="HP Simplified" size="14.0" />
             </font>
         </JFXButton>
-        <JFXButton fx:id="signup" layoutX="386.0" layoutY="307.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" style="-fx-background-color: #1194ab;" text="Sing Up" textFill="WHITE">
+        <JFXButton fx:id="signup" layoutX="386.0" layoutY="307.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" style="-fx-background-color: #1194ab;" text="Sign Up" textFill="WHITE">
             <font>
                 <Font name="HP Simplified" size="14.0" />
             </font>
         </JFXButton>
     </children>
 </AnchorPane>
-
