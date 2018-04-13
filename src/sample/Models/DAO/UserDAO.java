@@ -121,7 +121,7 @@ public class UserDAO {
             st.setString(  1, user.getName());
             st.setString(2, user.getAdress());
 
-            st.setInt(   3, user.getPhone());
+            st.setString(   3, user.getPhone());
             st.setString(4, user.getMail());
             st.setString(5, user.getUser());
             st.setString(  6, user.getPassword());

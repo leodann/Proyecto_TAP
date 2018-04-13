@@ -2,10 +2,10 @@ package sample.Models;
 
 public class User
 {
-    String Name, Adress, Mail, User, Password;
-    int Phone;
+    String Name, Adress, Mail, User, Password, Phone;
 
-    public User(String name, String adress, int phone, String mail, String user, String password) {
+
+    public User(String name, String adress, String phone, String mail, String user, String password) {
         Name = name;
         Adress = adress;
         Mail = mail;
@@ -54,11 +54,11 @@ public class User
         Password = password;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return Phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         Phone = phone;
     }
 }

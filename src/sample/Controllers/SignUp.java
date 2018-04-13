@@ -42,8 +42,7 @@ public class SignUp implements Initializable
     };
 
     public void Registrar(){
-        int numero = Integer.parseInt(Phone.getText());
-        aux = new User(Name.getText(), Adress.getText(), numero, Mail.getText(), User.getText(), Password.getText());
+        aux = new User(Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
         userdao.insert(aux);
     }
 }
