@@ -28,20 +28,18 @@ public class UserDAO {
         this.conn = conn;
     }
 
-   /* public List<Employee> findAll() {
-        List<Employee> employees = new ArrayList<Employee>();
+   public List<User> findAll() {
+        List<User> users = new ArrayList<User>();
         try {
-            String query = "SELECT * FROM employees limit 1000";
+            String query = "SELECT * FROM users limit 1000";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
-            Employee p = null;
+            User p = null;
             while(rs.next()) {
-                p = new Employee(
-                        rs.getInt("emp_no"), rs.getDate("birth_date"),
-                        rs.getString("first_name"), rs.getString("last_name"),
-                        rs.getString("gender").charAt(0), rs.getDate("hire_date")
+                p = new User(rs.getString("Name"), rs.getString("Adress"), rs.getString("Phone"),
+                        rs.getString("Mail"), rs.getString("User"), rs.getString("Password")
                 );
-                employees.add(p);
+                users.add(p);
             }
             rs.close();
             st.close();
@@ -50,11 +48,11 @@ public class UserDAO {
             ex.printStackTrace();
             System.out.println("Error al recuperar información...");
         }
-        return employees;
+        return users;
     }
 
 
-    public ObservableList<Employee> fetchAll() {
+    /* public ObservableList<Employee> fetchAll() {
         ObservableList<Employee> employees = FXCollections.observableArrayList();
         try {
             String query = "SELECT * FROM employees limit 1000";

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="'E'">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controllers/SignUp.java" afterPath="$PROJECT_DIR$/src/sample/Controllers/SignUp.java" />
       <change beforePath="$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Models/User.java" afterPath="$PROJECT_DIR$/src/sample/Models/User.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,6 +111,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Models/User.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -147,36 +156,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignUp.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SignUp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/SignUp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+            <state relative-caret-position="676">
+              <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#796#797#0" expanded="true" />
-                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#876#877#0" expanded="true" />
+                <element signature="e#922#923#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="114" column="2" lean-forward="false" selection-start-line="114" selection-start-column="2" selection-end-line="114" selection-end-column="2" />
-              <folding />
+            <state relative-caret-position="175">
+              <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+              <folding>
+                <element signature="e#766#772#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -478,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523632310987</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="'Añadir usuarios, aun sin verificacionde email ni user, pero ya funk :)'">
+      <created>1523663296488</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523663296488</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -528,7 +536,8 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="'Escenas log, sign y main'" />
-    <option name="LAST_COMMIT_MESSAGE" value="'Escenas log, sign y main'" />
+    <MESSAGE value="'Añadir usuarios, aun sin verificacionde email ni user, pero ya funk :)'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'Añadir usuarios, aun sin verificacionde email ni user, pero ya funk :)'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -584,7 +593,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2074">
           <caret line="122" column="0" lean-forward="true" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#766#772#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -635,8 +646,8 @@
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#796#797#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -864,17 +875,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/MainScene.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="153" column="54" lean-forward="false" selection-start-line="153" selection-start-column="54" selection-end-line="153" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Models/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -908,23 +908,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/SignUp.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+        <state relative-caret-position="175">
+          <caret line="33" column="47" lean-forward="false" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#796#797#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#766#772#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="114" column="2" lean-forward="false" selection-start-line="114" selection-start-column="2" selection-end-line="114" selection-end-column="2" />
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/MainScene.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="153" column="54" lean-forward="false" selection-start-line="153" selection-start-column="54" selection-end-line="153" selection-end-column="54" />
           <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/SignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
