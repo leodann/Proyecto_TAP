@@ -13,9 +13,8 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("FXML/LogIn.fxml"));
         homeS = primaryStage;
         primaryStage.setTitle("LogIn Task Manager");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 600, 380));
         primaryStage.setMaximized(false);
-        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

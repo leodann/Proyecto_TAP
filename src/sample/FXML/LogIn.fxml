@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.LogIn">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.LogIn" >
     <children>
         <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="40.0" prefWidth="608.0" text="TaskManager" textAlignment="CENTER" textFill="#1194ab">
             <font>
@@ -19,16 +19,17 @@
             </graphic>
         </Label>
 
-        <JFXTextField focusColor="#44568c" labelFloat="true" layoutX="118.0" layoutY="62.0" prefHeight="47.0" prefWidth="365.0" promptText="Username" unFocusColor="#1194ab">
+        <JFXTextField fx:id="User" focusColor="#44568c" labelFloat="true" layoutX="118.0" layoutY="62.0" prefHeight="47.0" prefWidth="365.0" promptText="Username" unFocusColor="#1194ab">
             <font>
                 <Font name="HP Simplified" size="16.0" />
-            </font></JFXTextField>
-        <JFXPasswordField focusColor="#44568c" labelFloat="true" layoutX="118.0" layoutY="177.0" prefHeight="47.0" prefWidth="365.0" promptText="Password" unFocusColor="#1194ab">
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="Password" focusColor="#44568c" labelFloat="true" layoutX="118.0" layoutY="177.0" prefHeight="47.0" prefWidth="365.0" promptText="Password" unFocusColor="#1194ab">
             <font>
                 <Font name="HP Simplified" size="16.0" />
             </font>
         </JFXPasswordField>
-        <JFXButton buttonType="RAISED" layoutX="118.0" layoutY="307.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" style="-fx-background-color: #1194ab;" text="Login" textFill="WHITE">
+        <JFXButton fx:id="login" buttonType="RAISED" layoutX="118.0" layoutY="307.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" style="-fx-background-color: #1194ab;" text="Login" textFill="WHITE">
             <font>
                 <Font name="HP Simplified" size="14.0" />
             </font>

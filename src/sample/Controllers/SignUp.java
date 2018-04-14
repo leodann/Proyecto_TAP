@@ -50,12 +50,12 @@ public class SignUp implements Initializable
         for(int i = 1; i< lista.size(); i++)
         {
             aux = lista.get(i);
-            if(User.getText().compareTo(aux.getUser()) == 0 || Mail.getText().compareTo(aux.getPassword()) == 0)
+            if(User.getText().compareTo(aux.getUser()) == 0 || Mail.getText().compareTo(aux.getMail()) == 0)
             {
                 Alert alerta = new Alert(Alert.AlertType.INFORMATION);
                 alerta.setTitle("ERROR");
                 alerta.setHeaderText("User or Mail already registered");
-                alerta.setContentText("Try Another User or Mail Account Please :)");
+                alerta.setContentText("Try Another User or Mail Account Please");
                 alerta.show();
             }
             else
