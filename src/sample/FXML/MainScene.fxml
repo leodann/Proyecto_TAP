@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainScene">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="1061.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainScene">
     <left>
-        <VBox prefHeight="422.0" prefWidth="134.0" BorderPane.alignment="CENTER">
+        <VBox depthTest="DISABLE" prefHeight="627.0" prefWidth="136.0" spacing="50.0" style="-fx-background-color: #aaaaaa;" BorderPane.alignment="CENTER">
             <children>
                 <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
                     <children>

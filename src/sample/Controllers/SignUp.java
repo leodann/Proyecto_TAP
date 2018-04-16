@@ -6,13 +6,19 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import sample.Main;
 import sample.Models.DAO.UserDAO;
 import sample.Models.User;
 import sample.MySQL;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -29,6 +35,7 @@ public class SignUp implements Initializable
     UserDAO userdao = new UserDAO(MySQL.getConnection());
     User aux;
     List<User> lista;
+    int cont;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -52,18 +59,40 @@ public class SignUp implements Initializable
             aux = lista.get(i);
             if(User.getText().compareTo(aux.getUser()) == 0 || Mail.getText().compareTo(aux.getMail()) == 0)
             {
-                Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-                alerta.setTitle("ERROR");
-                alerta.setHeaderText("User or Mail already registered");
-                alerta.setContentText("Try Another User or Mail Account Please");
-                alerta.show();
-            }
-            else
-            {
-                aux = new User(Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
-                userdao.insert(aux);
+                cont = cont +1;
             }
 
+                System.out.println(cont);
+
         }
+
+        if(cont>=1)
+        {
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText("User or Mail already registered");
+            alerta.setContentText("Try Another User or Mail Account Please");
+            alerta.show();
+            cont = 0;
+        }
+        else
+        {
+            aux = new User(Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
+            userdao.insert(aux);
+            try {
+                Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/MainScene.fxml"));
+                Stage StageP1;
+                Scene scene = new Scene(mainscene);
+                StageP1 = Main.homeS;
+                StageP1.setScene(scene);
+                StageP1.setMaximized(true);
+
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+
     }
 }
+
+
