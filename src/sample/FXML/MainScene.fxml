@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainScene">
     <left>
         <VBox prefHeight="422.0" prefWidth="134.0" BorderPane.alignment="CENTER">
             <children>
@@ -113,7 +113,7 @@
                            <children>
                               <HBox prefHeight="49.0" prefWidth="291.0" spacing="50.0">
                                  <children>
-                                    <JFXButton contentDisplay="TOP" mnemonicParsing="false" prefHeight="49.0" prefWidth="57.0" text="Add">
+                                    <JFXButton fx:id="add" contentDisplay="TOP" mnemonicParsing="false" prefHeight="49.0" prefWidth="57.0" text="Add">
                                         <graphic>
                                             <FontAwesomeIconView fill="#1194ab" glyphName="PLUS" text="" />
                                         </graphic>
