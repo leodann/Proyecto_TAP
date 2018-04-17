@@ -3,19 +3,22 @@ package sample.Models;
 import java.util.Date;
 
 public class Task {
-    String Title, Notes, ETime, Tags, Category;
-    Date start, finish;
-    char Priority;
+   String Title;
+   int Estimated_Time;
+   Date StarFrom;
+   Date FinishBy;
+   String Tags;
+   char Priority;
+   String Category;
 
-    public Task(String title, String notes, String ETime, String tags, String category, Date start, Date finish, char priority) {
+    public Task(String title, int estimated_Time, Date starFrom, Date finishBy, String tagas, char priority, String category) {
         Title = title;
-        Notes = notes;
-        this.ETime = ETime;
-        Tags = tags;
-        Category = category;
-        this.start = start;
-        this.finish = finish;
+        Estimated_Time = estimated_Time;
+        StarFrom = starFrom;
+        FinishBy = finishBy;
+        Tags = tagas;
         Priority = priority;
+        Category = category;
     }
 
     public String getTitle() {
@@ -26,52 +29,36 @@ public class Task {
         Title = title;
     }
 
-    public String getNotes() {
-        return Notes;
+    public int getEstimated_Time() {
+        return Estimated_Time;
     }
 
-    public void setNotes(String notes) {
-        Notes = notes;
+    public void setEstimated_Time(int estimated_Time) {
+        Estimated_Time = estimated_Time;
     }
 
-    public String getETime() {
-        return ETime;
+    public Date getStarFrom() {
+        return StarFrom;
     }
 
-    public void setETime(String ETime) {
-        this.ETime = ETime;
+    public void setStarFrom(Date starFrom) {
+        StarFrom = starFrom;
     }
 
-    public String getTags() {
+    public Date getFinishBy() {
+        return FinishBy;
+    }
+
+    public void setFinishBy(Date finishBy) {
+        FinishBy = finishBy;
+    }
+
+    public String getTagas() {
         return Tags;
     }
 
-    public void setTags(String tags) {
-        Tags = tags;
-    }
-
-    public String getCategory() {
-        return Category;
-    }
-
-    public void setCategory(String category) {
-        Category = category;
-    }
-
-    public Date getStart() {
-        return start;
-    }
-
-    public void setStart(Date start) {
-        this.start = start;
-    }
-
-    public Date getFinish() {
-        return finish;
-    }
-
-    public void setFinish(Date finish) {
-        this.finish = finish;
+    public void setTagas(String tagas) {
+        Tags = tagas;
     }
 
     public char getPriority() {
@@ -80,5 +67,13 @@ public class Task {
 
     public void setPriority(char priority) {
         Priority = priority;
+    }
+
+    public String getCategory() {
+        return Category;
+    }
+
+    public void setCategory(String category) {
+        Category = category;
     }
 }

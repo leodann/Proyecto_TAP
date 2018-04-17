@@ -80,12 +80,12 @@ public class SignUp implements Initializable
             aux = new User(Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
             userdao.insert(aux);
             try {
-                Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/MainScene.fxml"));
+                Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/LogIn.fxml"));
                 Stage StageP1;
-                Scene scene = new Scene(mainscene);
+                Scene scene = new Scene(mainscene, 600, 380);
                 StageP1 = Main.homeS;
                 StageP1.setScene(scene);
-                StageP1.setMaximized(true);
+
 
             }catch (IOException e){
                 e.printStackTrace();
