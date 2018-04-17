@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="1061.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainScene">
     <left>
-        <VBox prefHeight="422.0" prefWidth="134.0" BorderPane.alignment="CENTER">
+        <VBox depthTest="DISABLE" prefHeight="627.0" prefWidth="136.0" spacing="50.0" style="-fx-background-color: #aaaaaa;" BorderPane.alignment="CENTER">
             <children>
                 <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
                     <children>
@@ -46,12 +46,12 @@
                 </HBox>
                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
                     <children>
-                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #1194ab;" text="NEXT 7 DAYS" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="113.0" style="-fx-background-color: #1194ab;" text="NEXT 7 DAYS" textFill="WHITE">
                             <font>
-                                <Font name="HP Simplified" size="11.0" />
+                                <Font name="HP Simplified" size="10.0" />
                             </font>
                         </JFXButton>
-                        <JFXButton mnemonicParsing="false" prefHeight="26.0" prefWidth="23.0" text="">
+                        <JFXButton mnemonicParsing="false" prefHeight="26.0" prefWidth="22.0" text="">
                             <graphic>
                                 <MaterialDesignIconView fill="darkslategrey" glyphName="PLUS" glyphSize="15" />
                             </graphic>
@@ -113,7 +113,7 @@
                            <children>
                               <HBox prefHeight="49.0" prefWidth="291.0" spacing="50.0">
                                  <children>
-                                    <JFXButton contentDisplay="TOP" mnemonicParsing="false" prefHeight="49.0" prefWidth="57.0" text="Add">
+                                    <JFXButton fx:id="add" contentDisplay="TOP" mnemonicParsing="false" prefHeight="49.0" prefWidth="57.0" text="Add">
                                         <graphic>
                                             <FontAwesomeIconView fill="#1194ab" glyphName="PLUS" text="" />
                                         </graphic>

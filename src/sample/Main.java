@@ -10,12 +10,11 @@ public class Main extends Application {
     public static Stage homeS;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("FXML/MainScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXML/LogIn.fxml"));
         homeS = primaryStage;
         primaryStage.setTitle("LogIn Task Manager");
-        primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.setMaximized(true);
-        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root, 600, 380));
+        primaryStage.setMaximized(false);
         primaryStage.show();
     }
 
