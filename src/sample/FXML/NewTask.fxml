@@ -1,77 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXRadioButton?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<BorderPane fx:controller="sample.Controllers.NewTask"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/javafx"
+            prefHeight="400.0" prefWidth="600.0">
+   <padding>
+      <Insets topRightBottomLeft="0"/>
+   </padding>
 
-<AnchorPane prefHeight="462.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.NewTask">
-   <children>
-      <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="3.0" prefHeight="40.0" prefWidth="608.0" text="TaskManager" textAlignment="CENTER" textFill="#1194ab">
-         <font>
-            <Font size="28.0" />
-         </font>
-         <graphic>
-            <MaterialDesignIconView fill="#1194ab" glyphName="BOOK_OPEN" glyphSize="30" />
-         </graphic>
-      </Label>
-      <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="218.0" layoutY="40.0" prefHeight="29.0" prefWidth="175.0" text="Add A New Task" textAlignment="CENTER" textFill="#070c6b">
-         <font>
-            <Font name="HP Simplified" size="18.0" />
-         </font>
-      </Label>
-      <JFXTextField focusColor="#070c6b" labelFloat="true" layoutX="179.0" layoutY="94.0" prefHeight="25.0" prefWidth="254.0" promptText="Title" unFocusColor="#1194ab">
-         <font>
-            <Font name="HP Simplified" size="12.0" />
-         </font>
-      </JFXTextField>
-      <JFXTextField focusColor="#070c6b" labelFloat="true" layoutX="180.0" layoutY="134.0" prefHeight="25.0" prefWidth="254.0" promptText="Notes" unFocusColor="#1194ab" />
-      <JFXTextField focusColor="#070c6b" labelFloat="true" layoutX="180.0" layoutY="175.0" prefHeight="25.0" prefWidth="254.0" promptText="Estimated Time" unFocusColor="#1194ab" />
-      <JFXDatePicker defaultColor="#1194ab" layoutX="133.0" layoutY="237.0" promptText="Start From" />
-      <JFXDatePicker defaultColor="#1194ab" layoutX="308.0" layoutY="237.0" promptText="Finish By" />
-      <JFXTextField focusColor="#070c6b" labelFloat="true" layoutX="181.0" layoutY="284.0" prefHeight="25.0" prefWidth="254.0" promptText="Tags" unFocusColor="#1194ab" />
-      <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="133.0" layoutY="332.0" prefHeight="25.0" prefWidth="104.0" text="Priority" textAlignment="CENTER" textFill="#1194ab">
-         <font>
-            <Font name="HP Simplified" size="18.0" />
-         </font>
-      </Label>
+   <top>
+      <VBox alignment="CENTER" spacing="10">
+         <Label text="TaskManager" alignment="CENTER" contentDisplay="RIGHT"
+                textAlignment="CENTER" textFill="#1194ab" prefHeight="40" prefWidth="608">
+            <font>
+               <Font size="28.0"/>
+            </font>
+            <graphic>
+               <MaterialDesignIconView fill="#1194ab" glyphName="BOOK_OPEN" glyphSize="30"/>
+            </graphic>
+         </Label>
 
-      <JFXRadioButton layoutX="237.0" layoutY="336.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="66.0" text="High">
-         <font>
-            <Font name="HP Simplified" size="12.0" />
-         </font>
-      </JFXRadioButton>
-      <JFXRadioButton layoutX="308.0" layoutY="336.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="66.0" text="Regular">
-         <font>
-            <Font name="HP Simplified" size="12.0" />
-         </font>
-      </JFXRadioButton>
-      <JFXRadioButton layoutX="396.0" layoutY="336.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="66.0" text="Low">
-         <font>
-            <Font name="HP Simplified" size="12.0" />
-         </font>
-      </JFXRadioButton>
-      <JFXTextField focusColor="#070c6b" labelFloat="true" layoutX="181.0" layoutY="373.0" prefHeight="25.0" prefWidth="254.0" promptText="Category" unFocusColor="#1194ab" />
-      <JFXButton contentDisplay="RIGHT" layoutX="181.0" layoutY="423.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" ripplerFill="BLACK" style="-fx-background-color: #1194ab;" text="Save" textFill="WHITE">
-         <font>
-            <Font name="HP Simplified" size="12.0" />
-         </font>
-         <graphic>
-            <MaterialDesignIconView fill="white" glyphName="CONTENT_SAVE_ALL" glyphSize="14" />
-         </graphic>
-      </JFXButton>
+         <Label text="Add a New task" alignment="CENTER" textAlignment="CENTER" textFill="#070c6b"
+                contentDisplay="RIGHT" prefHeight="40" prefWidth="608">
+            <font>
+               <Font name="HP Simplified" size="18"/>
+            </font>
+         </Label>
+      </VBox>
+   </top>
 
-      <JFXButton contentDisplay="RIGHT" layoutX="377.0" layoutY="423.0" mnemonicParsing="false" style="-fx-background-color: #1194ab;" text="Cancel" textFill="WHITE">
-         <font>
-            <Font name="HP Simplified" size="12.0" />
-         </font>
-         <graphic>
-            <MaterialDesignIconView fill="white" glyphName="PENCIL_OFF" glyphSize="14" />
-         </graphic>
-      </JFXButton>
-   </children>
-</AnchorPane>
+   <center>
+      <GridPane alignment="CENTER" hgap="10" vgap="10">
+         <JFXTextField GridPane.columnIndex="0" GridPane.rowIndex="0" promptText="Title" focusColor="#070c6b"
+                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FiledTitle"/>
+
+         <JFXTextField GridPane.columnIndex="0" GridPane.rowIndex="1" promptText="Notes" focusColor="#070c6b"
+                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FiledNotes"/>
+         <JFXDatePicker GridPane.columnIndex="0" GridPane.rowIndex="2" promptText="Start From" defaultColor="#070c6b"
+                        prefHeight="25" prefWidth="255" fx:id="DateStart"/>
+
+         <JFXDatePicker GridPane.columnIndex="0" GridPane.rowIndex="3" promptText="Finsh by" defaultColor="#070c6b"
+                        prefHeight="25" prefWidth="255" fx:id="DateFinish"/>
+
+         <JFXTextField GridPane.columnIndex="0" GridPane.rowIndex="4" promptText="Estimated Time" focusColor="#070c6b"
+                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FieldEstimatedTime"/>
+
+         <JFXTextField GridPane.columnIndex="0" GridPane.rowIndex="5" promptText="Tags" focusColor="#070c6b"
+                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FiledTags"/>
+
+         <fx:define>
+            <ToggleGroup fx:id="toggleGroup1" />
+         </fx:define>
+         <HBox GridPane.columnIndex="0" GridPane.rowIndex="6">
+            <Label text="Priority" textFill="#070c6b"><font><Font name="HP Simplified" size="15"/></font></Label>
+
+            <JFXRadioButton id="rbHigh" text="High" toggleGroup="$toggleGroup1" textFill="#1194ab" selectedColor="#070c6b">
+               <font> <Font name="HP Simplified" size="15"/></font>
+            </JFXRadioButton>
+
+            <JFXRadioButton id="rbRegular" text="Regular" toggleGroup="$toggleGroup1" textFill="#1194ab" selectedColor="#070c6b">
+               <font> <Font name="HP Simplified" size="15"/></font>
+            </JFXRadioButton>
+
+            <JFXRadioButton id="rbLow" text="Low" toggleGroup="$toggleGroup1" textFill="#1194ab" selectedColor="#070c6b">
+               <font> <Font name="HP Simplified" size="15"/></font>
+            </JFXRadioButton>
+         </HBox>
+      </GridPane>
+   </center>
+</BorderPane>

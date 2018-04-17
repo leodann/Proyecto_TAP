@@ -55,6 +55,7 @@ public class MainScene implements Initializable
             Parent parent = loader.load();
             loader.setController(controller);
             Scene scene = new Scene(parent, 600,480);
+            stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
         }
