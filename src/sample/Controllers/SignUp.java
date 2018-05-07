@@ -11,13 +11,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import sample.Main;
 import sample.Models.DAO.UserDAO;
 import sample.Models.User;
 import sample.MySQL;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -30,7 +35,9 @@ public class SignUp implements Initializable
     @FXML
     JFXPasswordField Password;
     @FXML
-    JFXButton Register;
+    JFXButton Register,btnImage;
+    @FXML
+    ImageView Imageview;
 
     UserDAO userdao = new UserDAO(MySQL.getConnection());
     User aux;
@@ -39,7 +46,9 @@ public class SignUp implements Initializable
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         Register.setOnAction(Listener);
+        btnImage.setOnAction(Listener);
     }
 
     EventHandler<ActionEvent> Listener = new EventHandler<ActionEvent>() {
@@ -47,6 +56,9 @@ public class SignUp implements Initializable
         public void handle(ActionEvent event) {
             if( event.getSource() == Register){
                 Registrar();
+            }
+            else if(event.getSource() == btnImage){
+                selectImage();
             }
         }
     };
@@ -92,6 +104,26 @@ public class SignUp implements Initializable
             }
         }
 
+    }
+
+    private void selectImage(){
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Search an image");
+
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("All Images", "*.*"),
+                new FileChooser.ExtensionFilter("JPG", "*.jpg"),
+                new FileChooser.ExtensionFilter("PNG", "*.png")
+        );
+        Stage stage = new Stage();
+        File imgFile = fileChooser.showOpenDialog(stage);
+
+        if(imgFile!= null){
+            Image image = new Image("file:" + imgFile.getAbsolutePath());
+            Imageview.setImage(image);
+
+        }
+        System.out.println(""+imgFile.getAbsolutePath());
     }
 }
 

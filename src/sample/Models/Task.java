@@ -10,15 +10,17 @@ public class Task {
    String Tags;
    char Priority;
    String Category;
+   String Notes;
 
-    public Task(String title, int estimated_Time, Date starFrom, Date finishBy, String tagas, char priority, String category) {
+    public Task(String title, int estimated_Time, Date starFrom, Date finishBy, String tags, char priority, String category, String notes) {
         Title = title;
         Estimated_Time = estimated_Time;
         StarFrom = starFrom;
         FinishBy = finishBy;
-        Tags = tagas;
+        Tags = tags;
         Priority = priority;
         Category = category;
+        Notes = notes;
     }
 
     public String getTitle() {
@@ -53,12 +55,12 @@ public class Task {
         FinishBy = finishBy;
     }
 
-    public String getTagas() {
+    public String getTags() {
         return Tags;
     }
 
-    public void setTagas(String tagas) {
-        Tags = tagas;
+    public void setTags(String tags) {
+        Tags = tags;
     }
 
     public char getPriority() {
@@ -75,5 +77,13 @@ public class Task {
 
     public void setCategory(String category) {
         Category = category;
+    }
+
+    public String getNotes() {
+        return Notes;
+    }
+
+    public void setNotes(String notes) {
+        Notes = notes;
     }
 }

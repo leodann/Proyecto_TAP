@@ -14,11 +14,25 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="701.0" prefWidth="1061.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.MainScene">
     <left>
-        <VBox depthTest="DISABLE" prefHeight="627.0" prefWidth="136.0" spacing="50.0" style="-fx-background-color: #aaaaaa;" BorderPane.alignment="CENTER">
+        <VBox depthTest="DISABLE" prefHeight="627.0" prefWidth="136.0" spacing="50.0" style="-fx-background-color: #223340;" BorderPane.alignment="CENTER">
             <children>
-                <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
+                <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #223340;">
                     <children>
-                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #1194ab;" text="INBOX" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #24A0FA;" text="INBOX" textFill="#eef7fa">
+                            <font>
+                                <Font name="HP Simplified" size="11.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton mnemonicParsing="false" prefHeight="26.0" prefWidth="23.0" text="">
+                            <graphic>
+                                <MaterialDesignIconView fill="#eef7fa" glyphName="PLUS" glyphSize="15" />
+                            </graphic>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #223340;">
+                    <children>
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #24A0FA;" text="TODAY" textFill="WHITE">
                             <font>
                                 <Font name="HP Simplified" size="11.0" />
                             </font>
@@ -30,23 +44,9 @@
                         </JFXButton>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #223340;">
                     <children>
-                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #1194ab;" text="TODAY" textFill="WHITE">
-                            <font>
-                                <Font name="HP Simplified" size="11.0" />
-                            </font>
-                        </JFXButton>
-                        <JFXButton mnemonicParsing="false" prefHeight="26.0" prefWidth="23.0" text="">
-                            <graphic>
-                                <MaterialDesignIconView fill="darkslategrey" glyphName="PLUS" glyphSize="15" />
-                            </graphic>
-                        </JFXButton>
-                    </children>
-                </HBox>
-                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
-                    <children>
-                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="113.0" style="-fx-background-color: #1194ab;" text="NEXT 7 DAYS" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="113.0" style="-fx-background-color: #24A0FA;" text="NEXT 7 DAYS" textFill="WHITE">
                             <font>
                                 <Font name="HP Simplified" size="10.0" />
                             </font>
@@ -58,9 +58,9 @@
                         </JFXButton>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="310.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="310.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #223340;">
                     <children>
-                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #1194ab;" text="ON FOCUS" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #24A0FA;" text="ON FOCUS" textFill="WHITE">
                             <font>
                                 <Font name="HP Simplified" size="11.0" />
                             </font>
@@ -72,9 +72,9 @@
                         </JFXButton>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="330.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #aaaaaa;">
+                <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="330.0" prefHeight="100.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #223340;">
                     <children>
-                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #1194ab;" text="CALENDAR" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" mnemonicParsing="false" prefHeight="24.0" prefWidth="92.0" style="-fx-background-color: #24A0FA;" text="CALENDAR" textFill="WHITE">
                             <font>
                                 <Font name="HP Simplified" size="11.0" />
                             </font>
@@ -90,18 +90,18 @@
         </VBox>
     </left>
    <top>
-      <JFXToolbar prefHeight="64.0" prefWidth="684.0" BorderPane.alignment="CENTER">
+      <JFXToolbar prefHeight="64.0" prefWidth="684.0" style="-fx-background-color: #EEAF7FA;" BorderPane.alignment="CENTER">
          <top>
             <HBox prefHeight="74.0" prefWidth="684.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox prefHeight="46.0" prefWidth="143.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="74.0" prefWidth="286.0" style="-fx-background-color: #aaaaaa;" text="TASK MANAGER " textAlignment="CENTER" textFill="#1194ab" textOverrun="CLIP">
+                        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="74.0" prefWidth="286.0" style="-fx-background-color: #223340;" text="TASK MANAGER " textAlignment="CENTER" textFill="#eef7fa" textOverrun="CLIP">
                            <font>
                               <Font name="HP Simplified Bold" size="14.0" />
                            </font>
                            <graphic>
-                              <MaterialDesignIconView fill="#1194ab" glyphName="BOOK_OPEN" glyphSize="15" />
+                              <MaterialDesignIconView fill="#eef7fa" glyphName="BOOK_OPEN" glyphSize="15" text="" />
                            </graphic>
                         </Label>
                         <Separator orientation="VERTICAL" prefHeight="200.0" />
@@ -111,9 +111,9 @@
                      <children>
                         <VBox prefHeight="74.0" prefWidth="281.0">
                            <children>
-                              <HBox prefHeight="49.0" prefWidth="291.0" spacing="50.0">
+                              <HBox prefHeight="49.0" prefWidth="291.0" spacing="50.0" style="-fx-background-color: #223340;">
                                  <children>
-                                    <JFXButton fx:id="add" contentDisplay="TOP" mnemonicParsing="false" prefHeight="49.0" prefWidth="57.0" text="Add">
+                                    <JFXButton fx:id="add" contentDisplay="TOP" mnemonicParsing="false" prefHeight="49.0" prefWidth="57.0" text="Add" textFill="#eef7fa">
                                         <graphic>
                                             <FontAwesomeIconView fill="#1194ab" glyphName="PLUS" text="" />
                                         </graphic>

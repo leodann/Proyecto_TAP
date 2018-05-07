@@ -74,7 +74,7 @@ public class LogIn implements Initializable
         Scene scene = new Scene(signup,600,420);
         StageP1 = Main.homeS;
         StageP1.setScene(scene);
-        StageP1.setResizable(false);
+        StageP1.setResizable(true);
 
     }
 

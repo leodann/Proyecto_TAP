@@ -54,7 +54,7 @@ public class MainScene implements Initializable
         try {
             Parent parent = loader.load();
             loader.setController(controller);
-            Scene scene = new Scene(parent, 600,480);
+            Scene scene = new Scene(parent, 600,750);
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show();

@@ -12,6 +12,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXButton?>
 <BorderPane fx:controller="sample.Controllers.NewTask"
             xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/javafx"
@@ -42,12 +43,12 @@
    </top>
 
    <center>
-      <GridPane alignment="CENTER" hgap="10" vgap="10">
+      <GridPane alignment="CENTER" hgap="10" vgap="50">
          <JFXTextField GridPane.columnIndex="0" GridPane.rowIndex="0" promptText="Title" focusColor="#070c6b"
-                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FiledTitle"/>
+                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FieldTitle"/>
 
          <JFXTextField GridPane.columnIndex="0" GridPane.rowIndex="1" promptText="Notes" focusColor="#070c6b"
-                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FiledNotes"/>
+                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FieldNotes"/>
          <JFXDatePicker GridPane.columnIndex="0" GridPane.rowIndex="2" promptText="Start From" defaultColor="#070c6b"
                         prefHeight="25" prefWidth="255" fx:id="DateStart"/>
 
@@ -58,12 +59,14 @@
                        unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FieldEstimatedTime"/>
 
          <JFXTextField GridPane.columnIndex="0" GridPane.rowIndex="5" promptText="Tags" focusColor="#070c6b"
-                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FiledTags"/>
+                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FieldTags"/>
+         <JFXTextField GridPane.columnIndex="0" GridPane.rowIndex="6" promptText="Category" focusColor="#070c6b"
+                       unFocusColor="#1194ab" prefHeight="25" prefWidth="255" fx:id="FieldCategory"/>
 
          <fx:define>
             <ToggleGroup fx:id="toggleGroup1" />
          </fx:define>
-         <HBox GridPane.columnIndex="0" GridPane.rowIndex="6">
+         <HBox GridPane.columnIndex="0" GridPane.rowIndex="7">
             <Label text="Priority" textFill="#070c6b"><font><Font name="HP Simplified" size="15"/></font></Label>
 
             <JFXRadioButton id="rbHigh" text="High" toggleGroup="$toggleGroup1" textFill="#1194ab" selectedColor="#070c6b">
@@ -78,6 +81,11 @@
                <font> <Font name="HP Simplified" size="15"/></font>
             </JFXRadioButton>
          </HBox>
+          <HBox alignment="TOP_CENTER" spacing="30" GridPane.columnIndex="0" GridPane.rowIndex="8">
+              <JFXButton fx:id="btndone" text="Done" style="-fx-background-color: #1194ab" textFill="snow" ripplerFill="greenyellow">
+              </JFXButton>
+              <JFXButton fx:id="btncancel" text="Cancel" style="-fx-background-color: #1194ab" textFill="snow"/>
+          </HBox>
       </GridPane>
    </center>
 </BorderPane>

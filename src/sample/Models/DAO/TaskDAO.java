@@ -25,7 +25,7 @@ public class TaskDAO
             while(rs.next()) {
                 p = new Task(rs.getString("title"),rs.getInt("Estimated_Time"),rs.getDate("StarFrom"),
                         rs.getDate("FinishBy"),rs.getString("Tags"),rs.getString("Priority").charAt(0),
-                        rs.getString("Category")
+                        rs.getString("Category"),rs.getString("Notes")
                 );
                 tasks.add(p);
             }
@@ -101,7 +101,7 @@ public class TaskDAO
         try {
             String query = "insert into tasks "
                     + " (Title, Estimated_Time, StarFrom, FinishBy, Tags, Priority, Category)"
-                    + " values (?, ?, ?, ?, ?, ?, ?)";
+                    + " values (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement st =  conn.prepareStatement(query);
 
             st.setString(  1, task.getTitle());
@@ -109,9 +109,10 @@ public class TaskDAO
 
             st.setDate(   3, (Date) task.getStarFrom());
             st.setDate(4, (Date) task.getFinishBy());
-            st.setString(5, task.getTagas());
+            st.setString(5, task.getTags());
             st.setString(  6, String.valueOf(task.getPriority()));
             st.setString(7,task.getCategory());
+            st.setString(8,task.getNotes());
             st.execute();
             return true;
         } catch (Exception e) {
