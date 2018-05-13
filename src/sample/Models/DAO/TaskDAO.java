@@ -39,6 +39,33 @@ public class TaskDAO
         return tasks;
     }
 
+    public Boolean update(Task task) {
+        try {
+            String query = "update transaction "
+                    + " set category = ?, description = ?, date_created = ?, amount = ?, type = ?"
+                    + " where id=?";
+            System.out.println(query + "updating....");
+            PreparedStatement st =  conn.prepareStatement(query);
+
+            st.setString(  1, task.getTitle());
+            st.setInt   (  2, task.getEstimated_Time());
+            st.setDate  (  3, (Date) task.getStarFrom());
+            st.setDate  (  4, (Date) task.getFinishBy());
+            st.setString(  5, task.getTags());
+            st.setString(  6, String.valueOf(task.getPriority()));
+            st.setString(  7, task.getCategory());
+            st.setString(  8, task.getNotes());
+            st.setInt   (  9, task.getID());
+            st.execute();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        return false;
+    }
+
 
     /* public ObservableList<Employee> fetchAll() {
         ObservableList<Employee> employees = FXCollections.observableArrayList();
@@ -100,19 +127,18 @@ public class TaskDAO
     public Boolean insert(Task task) {
         try {
             String query = "insert into tasks "
-                    + " (Title, Estimated_Time, StarFrom, FinishBy, Tags, Priority, Category)"
+                    + " (Title, Estimated_Time, StarFrom, FinishBy, Tags, Priority, Category, Notes)"
                     + " values (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement st =  conn.prepareStatement(query);
 
             st.setString(  1, task.getTitle());
-            st.setInt(2, task.getEstimated_Time());
-
-            st.setDate(   3, (Date) task.getStarFrom());
-            st.setDate(4, (Date) task.getFinishBy());
-            st.setString(5, task.getTags());
+            st.setInt   (  2, task.getEstimated_Time());
+            st.setDate  (  3, (Date) task.getStarFrom());
+            st.setDate  (  4, (Date) task.getFinishBy());
+            st.setString(  5, task.getTags());
             st.setString(  6, String.valueOf(task.getPriority()));
-            st.setString(7,task.getCategory());
-            st.setString(8,task.getNotes());
+            st.setString(  7, task.getCategory());
+            st.setString(  8, task.getNotes());
             st.execute();
             return true;
         } catch (Exception e) {
