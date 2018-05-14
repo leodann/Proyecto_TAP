@@ -1,12 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane prefHeight="720.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerMain_a">
 
-</AnchorPane>
+    <top>
+      <JFXToolbar>
+          <center>
+             <GridPane hgap="10" prefHeight="100.0" prefWidth="274.0" vgap="10">
+                 <padding>
+                     <Insets left="10" />
+                 </padding>
+
+                 <JFXButton fx:id="btnAdd" contentDisplay="TOP" text="Add" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                     <graphic>
+                         <MaterialDesignIconView glyphName="PLUS" glyphSize="30" />
+                     </graphic>
+                     <font>
+                         <Font size="20.0" />
+                     </font>
+                 </JFXButton>
+                 <Separator orientation="VERTICAL" />
+
+                 <JFXButton fx:id="btnDelete" contentDisplay="TOP" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                     <graphic>
+                         <MaterialDesignIconView glyphName="DELETE" glyphSize="30" />
+                     </graphic>
+                     <font>
+                         <Font size="20.0" />
+                     </font>
+                 </JFXButton>
+                 <Separator orientation="VERTICAL" />
+
+                 <JFXButton fx:id="btnEdit" contentDisplay="TOP" text="Edit" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                     <graphic>
+                         <FontAwesomeIconView glyphName="EDIT" glyphSize="30" />
+                     </graphic>
+                     <font>
+                         <Font size="20.0" />
+                     </font>
+                 </JFXButton>
+                 <Separator orientation="VERTICAL" />
+
+                 <JFXTextField promptText="search" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+
+                 <JFXButton fx:id="btnSearch" text="" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <graphic>
+                         <FontAwesomeIconView glyphName="SEARCH" glyphSize="30" />
+                     </graphic>
+                 </JFXButton>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+
+             </GridPane>
+          </center>
+
+          <right>
+             <HBox>
+
+                 <JFXButton fx:id="btnPrint" contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="Print">
+                     <graphic>
+                         <FontAwesomeIconView glyphName="PRINT" glyphSize="30" />
+                     </graphic>
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+                 </JFXButton>
+
+                 <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="GitHub">
+                     <graphic>
+                         <MaterialDesignIconView glyphName="GITHUB_CIRCLE" glyphSize="30" />
+                     </graphic>
+                     <font>
+                         <Font size="20.0" />
+                     </font>
+                 </JFXButton>
+                 <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="About Us">
+                     <graphic>
+                         <MaterialDesignIconView glyphName="HELP_CIRCLE" glyphSize="30" />
+                     </graphic>
+                     <font>
+                         <Font size="20.0" />
+                     </font>
+                 </JFXButton>
+
+                 <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="USER">
+                     <graphic>
+                         <MaterialDesignIconView glyphName="HELP_CIRCLE" glyphSize="30" />
+                     </graphic>
+                     <font>
+                         <Font size="20.0" />
+                     </font>
+                 </JFXButton>
+
+             </HBox>
+         </right>
+
+         <left>
+             <VBox>
+                 <JFXHamburger fx:id="Hamburger" prefHeight="141.0" prefWidth="198.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                     <padding>
+                         <Insets left="10.0" top="10.0" />
+                     </padding>
+                 </JFXHamburger>
+
+             </VBox>
+         </left>
+
+      </JFXToolbar>
+    </top>
+    <left>
+        <JFXDrawer fx:id="Drawer" defaultDrawerSize="190.0" prefHeight="559.0" prefWidth="201.0">
+        </JFXDrawer>
+    </left>
+    <center>
+      <SplitPane />
+   </center>
+
+
+
+</BorderPane>

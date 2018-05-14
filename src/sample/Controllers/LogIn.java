@@ -93,12 +93,14 @@ public class LogIn implements Initializable
         if(cont == 1)
         {
             try {
-                Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/MainScene.fxml"));
+                //Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/MainScene.fxml"));
+                Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/Main_a.fxml"));
                 Stage StageP1;
-                Scene scene = new Scene(mainscene);
+                Scene scene = new Scene(mainscene,1120,720);
                 StageP1 = Main.homeS;
                 StageP1.setScene(scene);
-                StageP1.setMaximized(true);
+                StageP1.setMaximized(false);
+                StageP1.setResizable(false);
 
             }catch (IOException e){
                 e.printStackTrace();
