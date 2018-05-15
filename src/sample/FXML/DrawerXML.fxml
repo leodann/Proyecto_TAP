@@ -8,8 +8,7 @@
 <VBox prefHeight="634.0" prefWidth="224.0"
       xmlns="http://javafx.com/javafx/8.0.121"
       xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="sample.Controllers.ViewerController"
-        fx:id="Vbox">
+        fx:controller="sample.Controllers.ViewerController">
 
     <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="200.0" prefWidth="224.0" text="Task Manager">
         <graphic>
@@ -17,10 +16,10 @@
         </graphic>
     </Label>
 
-    <JFXButton fx:id="btnInbox" prefHeight="126.8" prefWidth="224.0" text="Inbox" />
-    <JFXButton fx:id="btnToday" prefHeight="126.8" prefWidth="224.0" text="Today" />
-    <JFXButton fx:id="btnN7" prefHeight="126.8" prefWidth="224.0" text="Next 7 days" />
-    <JFXButton fx:id="btnOnf" prefHeight="126.8" prefWidth="224.0" text="On focus" />
-    <JFXButton fx:id="btnCalendar" prefHeight="126.8" prefWidth="224.0" text="Calendar" />
+    <JFXButton fx:id="btnInbox" prefHeight="126.8" prefWidth="224.0" text="Inbox" accessibleText="btnInbox"/>
+    <JFXButton fx:id="btnToday" prefHeight="126.8" prefWidth="224.0" text="Today" accessibleText="btnToday"/>
+    <JFXButton fx:id="btnN7" prefHeight="126.8" prefWidth="224.0" text="Next 7 days" accessibleText="btnN7"/>
+    <JFXButton fx:id="btnOnf" prefHeight="126.8" prefWidth="224.0" text="On focus" accessibleText="btnOnF"/>
+    <JFXButton fx:id="btnCalendar" prefHeight="126.8" prefWidth="224.0" text="Calendar" accessibleText="bntCalendar"/>
 
 </VBox>

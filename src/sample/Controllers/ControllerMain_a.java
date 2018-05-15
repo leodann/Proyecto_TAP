@@ -9,9 +9,11 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -26,11 +28,17 @@ public class ControllerMain_a implements Initializable {
     JFXHamburger Hamburger;
     @FXML
     JFXDrawer Drawer;
+    @FXML
+    BorderPane BorderPaneM;
+
+    private String namePaneCenter, auxNPC;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initHamburger();
         initDrawer();
+        namePaneCenter = "../FXML/InboxXML.fxml";
+        ReloadCenterContent(namePaneCenter);
         btnAdd.setOnAction(Listener);
 
     }
@@ -75,27 +83,82 @@ public class ControllerMain_a implements Initializable {
     private void initHamburger() {
         HamburgerBackArrowBasicTransition HamburgerTransition = new HamburgerBackArrowBasicTransition(Hamburger);
         HamburgerTransition.setRate(-1);
-        Hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, (e) -> {
-            HamburgerTransition.setRate(HamburgerTransition.getRate() * -1);
-            HamburgerTransition.play();
+        Hamburger.addEventHandler(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                HamburgerTransition.setRate(HamburgerTransition.getRate() * -1);
+                HamburgerTransition.play();
 
-
-            if (Drawer.isShown()) {
-                Drawer.close();
-            } else {
-                Drawer.open();
+                if (Drawer.isShown()) {
+                    Drawer.close();
+                } else {
+                    Drawer.open();
+                }
             }
         });
     }
 
-        private void initDrawer(){
+
+    private void initDrawer(){
         try {
             VBox boxD = FXMLLoader.load(getClass().getResource("../FXML/DrawerXML.fxml"));
             Drawer.setSidePane(boxD);
+
+            for(Node node : boxD.getChildren()){
+                if(node.getAccessibleText() != null){
+                    node.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent event) {
+                            switch (node.getAccessibleText()){
+                                case "btnInbox" :
+                                    ReloadCenterContent("../FXML/InboxXML.fxml");
+                                    break;
+
+                                case "btnToday":
+                                    ReloadCenterContent("../FXML/Today.fxml");
+                                    break;
+
+                                case "btnN7":
+                                    ReloadCenterContent("../FXML/Next7.fxml");
+                                    break;
+
+                                case "btnOnF":
+                                    ReloadCenterContent("../FXML/OnFocus.fxml");
+                                    break;
+
+                                case "bntCalendar":
+                                    ReloadCenterContent("../FXML/Calendar.fxml");
+
+                            }
+                        }
+                    });
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
 
+    private Parent getCenterContent(String nameP)  {
+        Parent root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource(""+ nameP));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return root;
+    }
+
+    /*public String setNamePaneCenter(String name){
+        auxNPC = name;
+        namePaneCenter = auxNPC;
+        return namePaneCenter;
+    }*/
+
+    private void ReloadCenterContent(String n){
+        System.out.println("entraste al reload");
+        //BorderPaneM.setCenter(null);
+        BorderPaneM.setCenter(getCenterContent(n));
     }
 
 }
