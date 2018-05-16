@@ -19,9 +19,14 @@
     </top>
     <left>
         <VBox spacing="20">
-            <Label fx:id="lblDate" text="Date" >
+            <Label fx:id="lblDate_Day" text="Day" >
                 <font>
-                    <Font size="12"/>
+                    <Font size="30"/>
+                </font>
+            </Label>
+            <Label fx:id="lblDate_Month" text="Month" >
+                <font>
+                    <Font size="20"/>
                 </font>
             </Label>
             <JFXDatePicker fx:id="dpTask" promptText="Choose a date"/>

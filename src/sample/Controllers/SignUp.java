@@ -25,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Blob;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -43,6 +44,7 @@ public class SignUp implements Initializable
     User aux;
     List<User> lista;
     int cont;
+    private Blob blob;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -89,7 +91,7 @@ public class SignUp implements Initializable
         }
         else
         {
-            aux = new User(Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
+            aux = new User(blob,Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
             userdao.insert(aux);
             try {
                 Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/LogIn.fxml"));
@@ -121,6 +123,8 @@ public class SignUp implements Initializable
         if(imgFile!= null){
             Image image = new Image("file:" + imgFile.getAbsolutePath());
             Imageview.setImage(image);
+            blob = Blob.class.cast(image);
+
 
         }
         System.out.println(""+imgFile.getAbsolutePath());

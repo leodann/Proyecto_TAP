@@ -36,7 +36,7 @@ public class UserDAO {
             ResultSet rs = st.executeQuery(query);
             User p = null;
             while(rs.next()) {
-                p = new User(rs.getString("Name"), rs.getString("Adress"), rs.getString("Phone"),
+                p = new User(rs.getBlob("image"),rs.getString("Name"), rs.getString("Adress"), rs.getString("Phone"),
                         rs.getString("Mail"), rs.getString("User"), rs.getString("Password")
                 );
                 users.add(p);
@@ -112,17 +112,17 @@ public class UserDAO {
     public Boolean insert(User user) {
         try {
             String query = "insert into users "
-                    + " (Name, Adress, Phone, Mail, User, Password)"
-                    + " values (?, ?, ?, ?, ?, ?)";
+                    + " (image,Name, Adress, Phone, Mail, User, Password)"
+                    + " values (?,?, ?, ?, ?, ?, ?)";
             PreparedStatement st =  conn.prepareStatement(query);
 
-            st.setString(  1, user.getName());
-            st.setString(2, user.getAdress());
-
-            st.setString(   3, user.getPhone());
-            st.setString(4, user.getMail());
-            st.setString(5, user.getUser());
-            st.setString(  6, user.getPassword());
+            st.setBlob(    1, user.getBlob());
+            st.setString(  2, user.getName());
+            st.setString(  3, user.getAdress());
+            st.setString(  4, user.getPhone());
+            st.setString(  5, user.getMail());
+            st.setString(  6, user.getUser());
+            st.setString(  7, user.getPassword());
             st.execute();
             return true;
         } catch (Exception e) {

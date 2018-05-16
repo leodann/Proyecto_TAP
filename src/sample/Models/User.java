@@ -1,17 +1,21 @@
 package sample.Models;
 
+import java.sql.Blob;
+
 public class User
 {
     String Name, Adress, Mail, User, Password, Phone;
+    Blob blob;
 
 
-    public User(String name, String adress, String phone, String mail, String user, String password) {
-        Name = name;
-        Adress = adress;
-        Mail = mail;
-        User = user;
-        Password = password;
-        Phone = phone;
+    public User(Blob blob,String name, String adress, String phone, String mail, String user, String password) {
+        this.blob = blob;
+        this.Name = name;
+        this.Adress = adress;
+        this.Mail = mail;
+        this.User = user;
+        this.Password = password;
+        this.Phone = phone;
     }
 
     public String getName() {
@@ -60,5 +64,13 @@ public class User
 
     public void setPhone(String phone) {
         Phone = phone;
+    }
+
+    public Blob getBlob() {
+        return blob;
+    }
+
+    public void setBlob(Blob blob) {
+        this.blob = blob;
     }
 }
