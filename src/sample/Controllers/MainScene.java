@@ -9,7 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import sample.Main;
 
 import java.io.IOException;
 import java.net.URL;
@@ -48,8 +47,8 @@ public class MainScene implements Initializable
         stage.setTitle("New Task");
         stage.setResizable(false);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/NewTask.fxml"));
-        NewTask controller = new NewTask();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/TaskScene.fxml"));
+        TaskController controller = new TaskController();
 
         try {
             Parent parent = loader.load();

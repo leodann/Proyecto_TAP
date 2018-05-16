@@ -3,6 +3,8 @@ package sample.Models;
 import java.util.Date;
 
 public class Task {
+
+    int ID;
    String Title;
    int Estimated_Time;
    Date StarFrom;
@@ -12,6 +14,9 @@ public class Task {
    String Category;
    String Notes;
 
+    public Task(){
+
+    }
     public Task(String title, int estimated_Time, Date starFrom, Date finishBy, String tags, char priority, String category, String notes) {
         Title = title;
         Estimated_Time = estimated_Time;
@@ -85,5 +90,9 @@ public class Task {
 
     public void setNotes(String notes) {
         Notes = notes;
+    }
+
+    public int getID(){
+        return ID;
     }
 }
