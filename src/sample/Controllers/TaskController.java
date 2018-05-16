@@ -2,6 +2,7 @@ package sample.Controllers;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
+import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -32,6 +33,8 @@ public class TaskController implements Initializable {
 
     @FXML
     JFXTextField FieldTitle,FieldNotes,FieldEstimatedTime,FieldTags,FieldCategory;
+
+
 
     private TaskDAO taskDAO = new TaskDAO(MySQL.getConnection());
     private Task task;
