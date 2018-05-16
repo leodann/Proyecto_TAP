@@ -82,10 +82,10 @@ public class LogIn implements Initializable
     {
         lista = userdao.findAll();
 
-        for(int i=1; i<lista.size(); i++ )
+        for(int i=0; i<lista.size(); i++ )
         {
             aux = lista.get(i);
-            if(User.getText().compareTo(aux.getUser()) == 0 && Password.getText().compareTo(aux.getPassword()) == 0)
+            if(User.getText().compareToIgnoreCase(aux.getUser()) == 0 && Password.getText().compareToIgnoreCase(aux.getPassword()) == 0)
             {
                 cont = cont +1;
             }
