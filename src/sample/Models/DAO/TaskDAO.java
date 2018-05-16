@@ -1,5 +1,7 @@
 package sample.Models.DAO;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import sample.Models.Task;
 import sample.Models.User;
 
@@ -23,7 +25,7 @@ public class TaskDAO
             ResultSet rs = st.executeQuery(query);
             Task p = null;
             while(rs.next()) {
-                p = new Task(rs.getString("title"),rs.getInt("Estimated_Time"),rs.getDate("StarFrom"),
+                p = new Task(rs.getInt("ID"),rs.getString("title"),rs.getInt("Estimated_Time"),rs.getDate("StarFrom"),
                         rs.getDate("FinishBy"),rs.getString("Tags"),rs.getString("Priority").charAt(0),
                         rs.getString("Category"),rs.getString("Notes")
                 );
@@ -67,18 +69,24 @@ public class TaskDAO
     }
 
 
-    /* public ObservableList<Employee> fetchAll() {
-        ObservableList<Employee> employees = FXCollections.observableArrayList();
+    public ObservableList<Task> fetchAll() {
+        ObservableList<Task> employees = FXCollections.observableArrayList();
         try {
             String query = "SELECT * FROM employees limit 1000";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
-            Employee p = null;
+            Task p = null;
             while(rs.next()) {
-                p = new Employee(
-                        rs.getInt("emp_no"), rs.getDate("birth_date"),
-                        rs.getString("first_name"), rs.getString("last_name"),
-                        rs.getString("gender").charAt(0), rs.getDate("hire_date")
+                p = new Task(
+                        rs.getInt("ID"),
+                        rs.getString("Title"),
+                        rs.getInt("Estimated_Time"),
+                        rs.getDate("StarFrom"),
+                        rs.getDate("FinishBy"),
+                        rs.getString("Tags"),
+                        rs.getString("Priority").charAt(0),
+                        rs.getString("Category"),
+                        rs.getString("Notes")
                 );
                 employees.add(p);
             }
@@ -92,7 +100,7 @@ public class TaskDAO
         return employees;
     }
 
-    public Employee fetch(String no_emp) {
+    /*public Employee fetch(String no_emp) {
         ResultSet rs = null;
         Employee e = null;
         try {

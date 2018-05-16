@@ -5,19 +5,20 @@ import java.util.Date;
 public class Task {
 
     int ID;
-   String Title;
-   int Estimated_Time;
-   Date StarFrom;
-   Date FinishBy;
-   String Tags;
-   char Priority;
-   String Category;
-   String Notes;
+    String Title;
+    int Estimated_Time;
+    Date StarFrom;
+    Date FinishBy;
+    String Tags;
+    char Priority;
+    String Category;
+    String Notes;
 
     public Task(){
 
     }
-    public Task(String title, int estimated_Time, Date starFrom, Date finishBy, String tags, char priority, String category, String notes) {
+    public Task(int id,String title, int estimated_Time, Date starFrom, Date finishBy, String tags, char priority, String category, String notes) {
+        ID = id;
         Title = title;
         Estimated_Time = estimated_Time;
         StarFrom = starFrom;
@@ -94,5 +95,9 @@ public class Task {
 
     public int getID(){
         return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 }
