@@ -70,9 +70,9 @@ public class TaskDAO
 
 
     public ObservableList<Task> fetchAll() {
-        ObservableList<Task> employees = FXCollections.observableArrayList();
+        ObservableList<Task> task = FXCollections.observableArrayList();
         try {
-            String query = "SELECT * FROM employees limit 1000";
+            String query = "SELECT * FROM tasks";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -88,7 +88,7 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes")
                 );
-                employees.add(p);
+                task.add(p);
             }
             rs.close();
             st.close();
@@ -97,7 +97,7 @@ public class TaskDAO
             ex.printStackTrace();
             System.out.println("Error al recuperar información...");
         }
-        return employees;
+        return task;
     }
 
     /*public Employee fetch(String no_emp) {

@@ -7,8 +7,9 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.text.Font?>
-<BorderPane xmlns="http://javafx.com/javafx"
-            prefHeight="579.0" prefWidth="919.0">
+<?import com.jfoenix.controls.JFXListView?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            prefHeight="579.0" prefWidth="919.0" fx:controller="sample.Controllers.InboxController">
     <top>
         <Label text="INBOX" BorderPane.alignment="CENTER">
             <font>
@@ -16,5 +17,10 @@
             </font>
         </Label>
     </top>
+    <center>
+        <JFXListView fx:id="listView" >
+
+        </JFXListView>
+    </center>
 
 </BorderPane>

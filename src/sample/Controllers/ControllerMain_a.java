@@ -16,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -56,8 +57,7 @@ public class ControllerMain_a implements Initializable {
         }
     };
 
-    public void NewTask() throws IOException
-    {
+    public void NewTask() throws IOException {
 
         Stage stage = new Stage();
         stage.setTitle("New Task");
@@ -77,6 +77,13 @@ public class ControllerMain_a implements Initializable {
         catch(IOException e){
             e.printStackTrace();
         }
+
+        stage.addEventHandler(WindowEvent.WINDOW_HIDDEN, new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                ReloadCenterContent(namePaneCenter);
+            }
+        });
     }
 
 
@@ -111,23 +118,28 @@ public class ControllerMain_a implements Initializable {
                         public void handle(MouseEvent event) {
                             switch (node.getAccessibleText()){
                                 case "btnInbox" :
-                                    ReloadCenterContent("../FXML/InboxXML.fxml");
+                                    namePaneCenter = "../FXML/InboxXML.fxml";
+                                    ReloadCenterContent(namePaneCenter);
                                     break;
 
                                 case "btnToday":
-                                    ReloadCenterContent("../FXML/Today.fxml");
+                                    namePaneCenter = "../FXML/Today.fxml";
+                                    ReloadCenterContent(namePaneCenter);
                                     break;
 
                                 case "btnN7":
-                                    ReloadCenterContent("../FXML/Next7.fxml");
+                                    namePaneCenter = "../FXML/Next7.fxml";
+                                    ReloadCenterContent(namePaneCenter);
                                     break;
 
                                 case "btnOnF":
-                                    ReloadCenterContent("../FXML/OnFocus.fxml");
+                                    namePaneCenter = "../FXML/OnFocus.fxml";
+                                    ReloadCenterContent(namePaneCenter);
                                     break;
 
                                 case "bntCalendar":
-                                    ReloadCenterContent("../FXML/Calendar.fxml");
+                                    namePaneCenter = "../FXML/Calendar.fxml";
+                                    ReloadCenterContent(namePaneCenter);
 
                             }
                         }

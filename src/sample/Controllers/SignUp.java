@@ -36,7 +36,7 @@ public class SignUp implements Initializable
     @FXML
     JFXPasswordField Password;
     @FXML
-    JFXButton Register,btnImage;
+    JFXButton Register,btnImage,Cancel;
     @FXML
     ImageView Imageview;
 
@@ -51,6 +51,7 @@ public class SignUp implements Initializable
 
         Register.setOnAction(Listener);
         btnImage.setOnAction(Listener);
+        Cancel.setOnAction(Listener);
     }
 
     EventHandler<ActionEvent> Listener = new EventHandler<ActionEvent>() {
@@ -61,6 +62,10 @@ public class SignUp implements Initializable
             }
             else if(event.getSource() == btnImage){
                 selectImage();
+            }
+
+            else if(event.getSource() == Cancel){
+                ExitSignOut();
             }
         }
     };
@@ -128,6 +133,16 @@ public class SignUp implements Initializable
 
         }
         System.out.println(""+imgFile.getAbsolutePath());
+    }
+
+    private void ExitSignOut(){
+        try{
+            Parent LogIn = FXMLLoader.load(getClass().getResource("../FXML/LogIn.fxml"));
+            Stage StageP1;
+            Scene scene = new Scene(LogIn,600,420);
+            StageP1 = Main.homeS;
+            StageP1.setScene(scene);
+            StageP1.setResizable(true);} catch (Exception e ){e.printStackTrace();}
     }
 }
 
