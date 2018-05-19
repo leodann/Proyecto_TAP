@@ -17,6 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import sun.security.ec.ECDHKeyAgreement;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,7 +33,7 @@ public class ControllerMain_a implements Initializable {
     @FXML
     BorderPane BorderPaneM;
 
-    private String namePaneCenter, auxNPC;
+    private String namePaneCenter;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -41,6 +42,8 @@ public class ControllerMain_a implements Initializable {
         namePaneCenter = "../FXML/InboxXML.fxml";
         ReloadCenterContent(namePaneCenter);
         btnAdd.setOnAction(Listener);
+        btnDelete.setOnAction(Listener);
+        Delete();
 
     }
 
@@ -53,6 +56,9 @@ public class ControllerMain_a implements Initializable {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            }
+            else if(event.getSource() == btnDelete){
+                Delete();
             }
         }
     };
@@ -105,6 +111,25 @@ public class ControllerMain_a implements Initializable {
         });
     }
 
+    private void Delete(){
+        try{
+            BorderPane bP = FXMLLoader.load(getClass().getResource(namePaneCenter));
+            for (Node node : bP.getChildren()){
+                if(node.getAccessibleText()!= null){
+                    node.addEventHandler(ActionEvent.ANY, new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                            switch (node.getAccessibleText()){
+                                case "1":
+                                    System.out.println("dadsasdasd");
+                            }
+                        }
+                    });
+                }
+            }
+
+        }catch (Exception e){e.printStackTrace();}
+    }
 
     private void initDrawer(){
         try {
@@ -161,11 +186,6 @@ public class ControllerMain_a implements Initializable {
         return root;
     }
 
-    /*public String setNamePaneCenter(String name){
-        auxNPC = name;
-        namePaneCenter = auxNPC;
-        return namePaneCenter;
-    }*/
 
     private void ReloadCenterContent(String n){
         System.out.println("entraste al reload");

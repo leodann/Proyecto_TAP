@@ -13,12 +13,12 @@
     <top>
         <Label text="INBOX" BorderPane.alignment="CENTER">
             <font>
-                <Font size="90"/>
+                <Font size="50"/>
             </font>
         </Label>
     </top>
     <center>
-        <JFXListView fx:id="listView" >
+        <JFXListView fx:id="listView">
 
         </JFXListView>
     </center>

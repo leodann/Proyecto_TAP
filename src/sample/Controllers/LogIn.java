@@ -99,8 +99,8 @@ public class LogIn implements Initializable
                 Scene scene = new Scene(mainscene,1120,720);
                 StageP1 = Main.homeS;
                 StageP1.setScene(scene);
-                StageP1.setMaximized(false);
-                StageP1.setResizable(false);
+                StageP1.setMaximized(true);
+                StageP1.setResizable(true);
 
             }catch (IOException e){
                 e.printStackTrace();

@@ -68,16 +68,6 @@
                          <FontAwesomeIconView glyphName="SEARCH" glyphSize="30" />
                      </graphic>
                  </JFXButton>
-               <columnConstraints>
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-                  <ColumnConstraints />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints />
-                  <RowConstraints />
-               </rowConstraints>
 
              </GridPane>
           </center>
