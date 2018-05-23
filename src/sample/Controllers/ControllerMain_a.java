@@ -25,8 +25,6 @@ import java.util.ResourceBundle;
 
 public class ControllerMain_a implements Initializable {
     @FXML
-    JFXButton btnAdd, btnDelete, btnEdit, btnSearch, btnPrint;
-    @FXML
     JFXHamburger Hamburger;
     @FXML
     JFXDrawer Drawer;
@@ -41,25 +39,15 @@ public class ControllerMain_a implements Initializable {
         initDrawer();
         namePaneCenter = "../FXML/InboxXML.fxml";
         ReloadCenterContent(namePaneCenter);
-        btnAdd.setOnAction(Listener);
-        btnDelete.setOnAction(Listener);
-        Delete();
+        //btnAdd.setOnAction(Listener);
+        //Delete();
 
     }
 
     EventHandler <ActionEvent> Listener = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-            if(event.getSource() == btnAdd){
-                try {
-                    NewTask();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            else if(event.getSource() == btnDelete){
-                Delete();
-            }
+
         }
     };
 
