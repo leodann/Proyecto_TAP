@@ -4,6 +4,10 @@ package sample.Models.DAO;/*
  * and open the template in the editor.
  */
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -16,10 +20,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import sample.Models.User;
 
-/**
- *
- * @author niluxer
- */
+
 public class UserDAO {
 
     Connection conn;
@@ -35,9 +36,19 @@ public class UserDAO {
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             User p = null;
+            InputStream is = rs.getBinaryStream("image");
+            OutputStream os = new FileOutputStream(new File(""));
+            byte[] content = new byte[1024];
+            int size = 0;
+            while((size = is.read(content))!=-1){
+                os.write(content,0,size);
+
+            }
+            os.close();
+            is.close();
             while(rs.next()) {
                 p = new User(
-                        rs.getBytes("image"),
+                        is,
                         rs.getString("Name"),
                         rs.getString("Adress"),
                         rs.getString("Phone"),
@@ -122,7 +133,7 @@ public class UserDAO {
                     + " values (?,?, ?, ?, ?, ?, ?)";
             PreparedStatement st =  conn.prepareStatement(query);
 
-            st.setBytes (    1, user.getImage());
+            st.setBinaryStream(1, user.getFis(),user.getLengthBytes());
             st.setString(  2, user.getName());
             st.setString(  3, user.getAdress());
             st.setString(  4, user.getPhone());

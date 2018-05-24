@@ -45,6 +45,8 @@ public class SignUp implements Initializable
     List<User> lista;
     int cont;
     private Blob blob;
+    private File imgFile;
+    private FileInputStream fis;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -71,6 +73,20 @@ public class SignUp implements Initializable
     };
 
     public void Registrar(){
+        /*try{fis = new FileInputStream(imgFile);}catch (Exception e){e.printStackTrace();}
+        aux = new User(fis,(int)imgFile.length(),Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
+        userdao.insert(aux);
+        try {
+            Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/LogIn.fxml"));
+            Stage StageP1;
+            Scene scene = new Scene(mainscene, 600, 380);
+            StageP1 = Main.homeS;
+            StageP1.setScene(scene);
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }*/
         lista = userdao.findAll();
 
         for(int i = 1; i< lista.size(); i++)
@@ -94,7 +110,7 @@ public class SignUp implements Initializable
             alerta.show();
             cont = 0;
         }
-        else
+       else
         {
             //aux = new User(blob,Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
             userdao.insert(aux);
@@ -123,12 +139,11 @@ public class SignUp implements Initializable
                 new FileChooser.ExtensionFilter("PNG", "*.png")
         );
         Stage stage = new Stage();
-        File imgFile = fileChooser.showOpenDialog(stage);
+        imgFile = fileChooser.showOpenDialog(stage);
 
         if(imgFile!= null){
             Image image = new Image("file:" + imgFile.getAbsolutePath());
             Imageview.setImage(image);
-            blob = Blob.class.cast(image);
 
 
         }

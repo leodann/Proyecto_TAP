@@ -6,11 +6,13 @@ import java.sql.Blob;
 public class User
 {
     String Name, Adress, Mail, User, Password, Phone;
-    byte [] image;
+    FileInputStream fis;
+    int lengthBytes;
 
 
-    public User(byte[]image,String name, String adress, String phone, String mail, String user, String password) {
-        this.image = image;
+    public User(FileInputStream fis,int lengthBytes,String name, String adress, String phone, String mail, String user, String password) {
+        this.fis = fis;
+        this.lengthBytes = lengthBytes;
         this.Name = name;
         this.Adress = adress;
         this.Mail = mail;
@@ -67,11 +69,19 @@ public class User
         Phone = phone;
     }
 
-    public byte[] getImage() {
-        return image;
+    public FileInputStream getFis() {
+        return fis;
     }
 
-    public void setImage(byte[] image) {
-        this.image = image;
+    public void setFis(FileInputStream fis) {
+        this.fis = fis;
+    }
+
+    public int getLengthBytes() {
+        return lengthBytes;
+    }
+
+    public void setLengthBytes(int lengthBytes) {
+        this.lengthBytes = lengthBytes;
     }
 }
