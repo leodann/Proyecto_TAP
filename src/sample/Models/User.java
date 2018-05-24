@@ -1,15 +1,16 @@
 package sample.Models;
 
+import java.io.FileInputStream;
 import java.sql.Blob;
 
 public class User
 {
     String Name, Adress, Mail, User, Password, Phone;
-    Blob blob;
+    byte [] image;
 
 
-    public User(Blob blob,String name, String adress, String phone, String mail, String user, String password) {
-        this.blob = blob;
+    public User(byte[]image,String name, String adress, String phone, String mail, String user, String password) {
+        this.image = image;
         this.Name = name;
         this.Adress = adress;
         this.Mail = mail;
@@ -66,11 +67,11 @@ public class User
         Phone = phone;
     }
 
-    public Blob getBlob() {
-        return blob;
+    public byte[] getImage() {
+        return image;
     }
 
-    public void setBlob(Blob blob) {
-        this.blob = blob;
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }

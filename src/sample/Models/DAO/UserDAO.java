@@ -36,8 +36,14 @@ public class UserDAO {
             ResultSet rs = st.executeQuery(query);
             User p = null;
             while(rs.next()) {
-                p = new User(rs.getBlob("image"),rs.getString("Name"), rs.getString("Adress"), rs.getString("Phone"),
-                        rs.getString("Mail"), rs.getString("User"), rs.getString("Password")
+                p = new User(
+                        rs.getBytes("image"),
+                        rs.getString("Name"),
+                        rs.getString("Adress"),
+                        rs.getString("Phone"),
+                        rs.getString("Mail"),
+                        rs.getString("User"),
+                        rs.getString("Password")
                 );
                 users.add(p);
             }
@@ -116,7 +122,7 @@ public class UserDAO {
                     + " values (?,?, ?, ?, ?, ?, ?)";
             PreparedStatement st =  conn.prepareStatement(query);
 
-            st.setBlob(    1, user.getBlob());
+            st.setBytes (    1, user.getImage());
             st.setString(  2, user.getName());
             st.setString(  3, user.getAdress());
             st.setString(  4, user.getPhone());

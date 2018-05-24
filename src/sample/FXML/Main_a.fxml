@@ -1,29 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="BorderPaneM" prefHeight="720.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerMain_a">
 
     <top>
+        <JFXToolbar prefHeight="180.0" prefWidth="1286.0">
+         <center>
+            <HBox>
+                <JFXButton fx:id="btnAdd" contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="Add">
+                    <graphic>
+                        <MaterialDesignIconView glyphName="PLUS" glyphSize="30" />
+                    </graphic>
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </JFXButton>
 
-        <JFXHamburger fx:id="Hamburger" alignment="TOP_LEFT" prefHeight="141.0" prefWidth="1010.0" spacing="5.0">
-            <padding>
-                <Insets left="10.0" top="10.0" />
-            </padding>
-        </JFXHamburger>
-        <fx:include source="ToolTipBar.fxml"/>
+                <JFXButton fx:id="btnSearch" contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="Search">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="SEARCH" glyphSize="30" />
+                    </graphic>
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </JFXButton>
+
+                <JFXButton fx:id="btnPrint" contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="Print">
+                    <graphic>
+                        <FontAwesomeIconView glyphName="PRINT" glyphSize="30" />
+                    </graphic>
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </JFXButton>
+            </HBox>
+         </center>
+         <left>
+               <JFXHamburger fx:id="Hamburger" alignment="TOP_LEFT" prefHeight="180.0" prefWidth="201.0" spacing="5.0" BorderPane.alignment="CENTER">
+                   <padding>
+                       <Insets left="10.0" top="10.0" />
+                   </padding>
+               </JFXHamburger>
+         </left>
+         <right>
+            <HBox>
+                <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="GitHub">
+                    <graphic>
+                        <MaterialDesignIconView glyphName="GITHUB_CIRCLE" glyphSize="30" />
+                    </graphic>
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="About Us">
+                    <graphic>
+                        <MaterialDesignIconView glyphName="HELP_CIRCLE" glyphSize="30" />
+                    </graphic>
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </JFXButton>
+
+                <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="USER">
+                    <graphic>
+                        <MaterialDesignIconView glyphName="HELP_CIRCLE" glyphSize="30" />
+                    </graphic>
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </JFXButton>
+            </HBox>
+         </right>
+
+        </JFXToolbar>
+
+
     </top>
     <left>
         <JFXDrawer fx:id="Drawer" defaultDrawerSize="190.0" prefHeight="559.0" prefWidth="201.0">
         </JFXDrawer>
     </left>
     <center>
-      <SplitPane />
-   </center>
+        <BorderPane fx:id="Center">
+            
+        </BorderPane>
+    </center>
 
 
 

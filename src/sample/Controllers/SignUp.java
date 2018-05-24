@@ -96,7 +96,7 @@ public class SignUp implements Initializable
         }
         else
         {
-            aux = new User(blob,Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
+            //aux = new User(blob,Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
             userdao.insert(aux);
             try {
                 Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/LogIn.fxml"));

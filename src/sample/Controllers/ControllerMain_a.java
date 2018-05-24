@@ -12,8 +12,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -30,6 +33,8 @@ public class ControllerMain_a implements Initializable {
     JFXDrawer Drawer;
     @FXML
     BorderPane BorderPaneM;
+    @FXML
+    Button btnAdd;
 
     private String namePaneCenter;
 
@@ -39,15 +44,22 @@ public class ControllerMain_a implements Initializable {
         initDrawer();
         namePaneCenter = "../FXML/InboxXML.fxml";
         ReloadCenterContent(namePaneCenter);
+        btnAdd.setOnAction(handler);
         //btnAdd.setOnAction(Listener);
         //Delete();
 
     }
 
-    EventHandler <ActionEvent> Listener = new EventHandler<ActionEvent>() {
+    EventHandler<ActionEvent> handler = new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-
+            if(event.getSource()==btnAdd){
+                try {
+                    NewTask();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     };
 
@@ -80,7 +92,6 @@ public class ControllerMain_a implements Initializable {
         });
     }
 
-
     private void initHamburger() {
         HamburgerBackArrowBasicTransition HamburgerTransition = new HamburgerBackArrowBasicTransition(Hamburger);
         HamburgerTransition.setRate(-1);
@@ -99,25 +110,6 @@ public class ControllerMain_a implements Initializable {
         });
     }
 
-    private void Delete(){
-        try{
-            BorderPane bP = FXMLLoader.load(getClass().getResource(namePaneCenter));
-            for (Node node : bP.getChildren()){
-                if(node.getAccessibleText()!= null){
-                    node.addEventHandler(ActionEvent.ANY, new EventHandler<ActionEvent>() {
-                        @Override
-                        public void handle(ActionEvent event) {
-                            switch (node.getAccessibleText()){
-                                case "1":
-                                    System.out.println("dadsasdasd");
-                            }
-                        }
-                    });
-                }
-            }
-
-        }catch (Exception e){e.printStackTrace();}
-    }
 
     private void initDrawer(){
         try {
