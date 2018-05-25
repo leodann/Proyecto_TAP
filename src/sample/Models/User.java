@@ -8,11 +8,25 @@ public class User
     String Name, Adress, Mail, User, Password, Phone;
     FileInputStream fis;
     int lengthBytes;
+    Blob image;
 
 
-    public User(FileInputStream fis,int lengthBytes,String name, String adress, String phone, String mail, String user, String password) {
+    public User(FileInputStream fis,int lengthBytes/*Blob image*/,String name, String adress, String phone, String mail, String user, String password) {
         this.fis = fis;
         this.lengthBytes = lengthBytes;
+        //this.image = image;
+        this.Name = name;
+        this.Adress = adress;
+        this.Mail = mail;
+        this.User = user;
+        this.Password = password;
+        this.Phone = phone;
+    }
+
+    public User(Blob image,String name, String adress, String phone, String mail, String user, String password) {
+        //this.fis = fis;
+        //this.lengthBytes = lengthBytes;
+        this.image = image;
         this.Name = name;
         this.Adress = adress;
         this.Mail = mail;
@@ -83,5 +97,13 @@ public class User
 
     public void setLengthBytes(int lengthBytes) {
         this.lengthBytes = lengthBytes;
+    }
+
+    public Blob getImage() {
+        return image;
+    }
+
+    public void setImage(Blob image) {
+        this.image = image;
     }
 }

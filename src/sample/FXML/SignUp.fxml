@@ -35,7 +35,8 @@
             <children>
                 <AnchorPane prefHeight="310.0" prefWidth="282.0">
                     <children>
-                        <ImageView fx:id="Imageview" fitHeight="104.0" fitWidth="159.0" layoutX="62.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="Imageview" fitHeight="104.0" fitWidth="159.0" layoutX="62.0" pickOnBounds="true" preserveRatio="true">
+                     </ImageView>
                         <JFXButton fx:id="btnImage" buttonType="RAISED" layoutX="70.0" layoutY="117.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="145.0" style="-fx-background-color: #1194ab;" text="Choose Image" textFill="#f5f5f5" />
                         <JFXTextField fx:id="User" focusColor="#070c6b" labelFloat="true" layoutX="40.0" layoutY="163.0" prefHeight="25.0" prefWidth="204.0" promptText="User" unFocusColor="#1194ab">
                             <font>

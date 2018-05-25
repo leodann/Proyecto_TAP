@@ -4,16 +4,8 @@ package sample.Models.DAO;/*
  * and open the template in the editor.
  */
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import javafx.collections.FXCollections;
@@ -32,31 +24,33 @@ public class UserDAO {
    public List<User> findAll() {
         List<User> users = new ArrayList<User>();
         try {
-            String query = "SELECT * FROM users limit 1000";
+            String query = "SELECT * FROM users";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             User p = null;
-            InputStream is = rs.getBinaryStream("image");
-            OutputStream os = new FileOutputStream(new File(""));
-            byte[] content = new byte[1024];
-            int size = 0;
-            while((size = is.read(content))!=-1){
-                os.write(content,0,size);
-
-            }
-            os.close();
-            is.close();
+            int cont =0;
             while(rs.next()) {
+                File file = new File("C:\\Users\\Loenardo Villanueva\\Desktop\\image"+cont+".png");
+                FileOutputStream fos = new FileOutputStream(file);
+                byte bytes [];
+                Blob blob = rs.getBlob("image");
+                bytes = blob.getBytes(1,(int)blob.length());
+                fos.write(bytes);
+                fos.close();
+
+
                 p = new User(
-                        is,
+                        rs.getBlob("image"),
+                        //rs.getBinaryStream("image"),
                         rs.getString("Name"),
                         rs.getString("Adress"),
                         rs.getString("Phone"),
-                        rs.getString("Mail"),
+                        rs.getString(  "Mail"),
                         rs.getString("User"),
                         rs.getString("Password")
                 );
                 users.add(p);
+                cont++;
             }
             rs.close();
             st.close();
@@ -64,7 +58,7 @@ public class UserDAO {
         } catch (SQLException ex) {
             ex.printStackTrace();
             System.out.println("Error al recuperar información...");
-        }
+        }catch (IOException E){E.printStackTrace();}
         return users;
     }
 

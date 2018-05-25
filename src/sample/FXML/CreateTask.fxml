@@ -14,7 +14,7 @@
 <?import com.jfoenix.controls.JFXTextArea?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.Controllers.TaskController"
+            fx:controller="sample.Controllers.CreateTaskController"
             prefHeight="400.0" prefWidth="600.0">
 
     <top>

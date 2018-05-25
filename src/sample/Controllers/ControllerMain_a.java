@@ -1,29 +1,38 @@
 package sample.Controllers;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 import com.jfoenix.controls.JFXHamburger;
+import com.jfoenix.controls.JFXListView;
+import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import sun.security.ec.ECDHKeyAgreement;
+import sample.Models.DAO.TaskDAO;
+import sample.Models.Task;
+import sample.MySQL;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
 public class ControllerMain_a implements Initializable {
@@ -34,9 +43,12 @@ public class ControllerMain_a implements Initializable {
     @FXML
     BorderPane BorderPaneM;
     @FXML
-    Button btnAdd;
+    Button btnAdd,btnSearch;
+
+
 
     private String namePaneCenter;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -45,8 +57,7 @@ public class ControllerMain_a implements Initializable {
         namePaneCenter = "../FXML/InboxXML.fxml";
         ReloadCenterContent(namePaneCenter);
         btnAdd.setOnAction(handler);
-        //btnAdd.setOnAction(Listener);
-        //Delete();
+        btnSearch.setOnAction(handler);
 
     }
 
@@ -60,8 +71,42 @@ public class ControllerMain_a implements Initializable {
                     e.printStackTrace();
                 }
             }
+            if(event.getSource() == btnSearch){
+               NewSearch();
+            }
         }
     };
+
+
+    public void NewSearch(){
+
+        Stage stage = new Stage();
+        stage.setTitle("New Task");
+        stage.setResizable(false);
+
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/Search.fxml"));
+        CreateTaskController controller = new CreateTaskController();
+
+
+            Parent parent = loader.load();
+            loader.setController(controller);
+            Scene scene = new Scene(parent, 600,750);
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+
+        stage.addEventHandler(WindowEvent.WINDOW_HIDDEN, new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                ReloadCenterContent(namePaneCenter);
+            }
+        });
+    }
 
     public void NewTask() throws IOException {
 
@@ -69,10 +114,10 @@ public class ControllerMain_a implements Initializable {
         stage.setTitle("New Task");
         stage.setResizable(false);
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/TaskScene.fxml"));
-        TaskController controller = new TaskController();
+        try{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/CreateTask.fxml"));
+        CreateTaskController controller = new CreateTaskController();
 
-        try {
             Parent parent = loader.load();
             loader.setController(controller);
             Scene scene = new Scene(parent, 600,750);
@@ -123,7 +168,7 @@ public class ControllerMain_a implements Initializable {
                         public void handle(MouseEvent event) {
                             switch (node.getAccessibleText()){
                                 case "btnInbox" :
-                                    namePaneCenter = "../FXML/InboxXML.fxml";
+                                    namePaneCenter = "../FXML/Inbox.fxml";
                                     ReloadCenterContent(namePaneCenter);
                                     break;
 
@@ -133,7 +178,7 @@ public class ControllerMain_a implements Initializable {
                                     break;
 
                                 case "btnN7":
-                                    namePaneCenter = "../FXML/Next7.fxml";
+                                    namePaneCenter = "../FXML/Next7Days.fxml";
                                     ReloadCenterContent(namePaneCenter);
                                     break;
 

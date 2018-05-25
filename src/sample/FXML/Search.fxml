@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Separator?>
+<AnchorPane prefHeight="181.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SearchController">
+   <children>
+      <Label layoutX="144.0" layoutY="7.0" text="Search a Task" />
+      <JFXTextField fx:id="tfSearch" layoutX="14.0" layoutY="61.0" promptText="search" />
+       <JFXButton fx:id="btnSearch" layoutX="184.0" layoutY="73.0" text="" />
+             <FontAwesomeIconView glyphName="SEARCH" glyphSize="15" layoutX="189.0" layoutY="80.0" />
+      <VBox layoutX="221.0" layoutY="40.0" prefHeight="127.0" prefWidth="135.0" spacing="25">
+          <Label fx:id="lblCategory" text="Category"/>
+          <Separator orientation="HORIZONTAL"/>
+          <Label fx:id="lblTags" text="Tags"/>
+          <Separator orientation="HORIZONTAL"/>
+          <Label fx:id="lblPriority" text="Priority"/>
+          <Separator orientation="VERTICAL"/>
+      </VBox>
+   </children>
+</AnchorPane>

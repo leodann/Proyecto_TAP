@@ -52,7 +52,7 @@ public class LogIn implements Initializable
             }
 
             if(event.getSource() == login){
-                //Log();
+                Log();
             }
 
         }

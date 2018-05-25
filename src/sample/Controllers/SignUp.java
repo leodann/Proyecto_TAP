@@ -20,12 +20,10 @@ import sample.Models.DAO.UserDAO;
 import sample.Models.User;
 import sample.MySQL;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.sql.Blob;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -112,7 +110,11 @@ public class SignUp implements Initializable
         }
        else
         {
-            //aux = new User(blob,Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
+            //aux = new User(,Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
+            userdao.insert(aux);
+            try{fis = new FileInputStream(imgFile);}catch (Exception e){e.printStackTrace();}
+
+            aux = new User(fis,(int)imgFile.length(),Name.getText(), Adress.getText(), Phone.getText(), Mail.getText(), User.getText(), Password.getText());
             userdao.insert(aux);
             try {
                 Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/LogIn.fxml"));
