@@ -128,7 +128,7 @@ public class UserDAO {
             PreparedStatement st =  conn.prepareStatement(query);
 
             st.setBinaryStream(1, user.getFis(),user.getLengthBytes());
-            st.setString(  2, user.getName());
+            st.setString(       2, user.getName());
             st.setString(  3, user.getAdress());
             st.setString(  4, user.getPhone());
             st.setString(  5, user.getMail());
