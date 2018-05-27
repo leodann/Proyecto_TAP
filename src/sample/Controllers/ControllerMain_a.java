@@ -1,9 +1,6 @@
 package sample.Controllers;
 
-import com.jfoenix.controls.JFXDrawer;
-import com.jfoenix.controls.JFXHamburger;
-import com.jfoenix.controls.JFXListView;
-import com.jfoenix.controls.JFXRadioButton;
+import com.jfoenix.controls.*;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -26,6 +23,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import sample.Manage;
 import sample.Models.DAO.TaskDAO;
 import sample.Models.Task;
 import sample.MySQL;
@@ -34,6 +32,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 public class ControllerMain_a implements Initializable {
     @FXML
@@ -44,7 +43,10 @@ public class ControllerMain_a implements Initializable {
     BorderPane BorderPaneM;
     @FXML
     Button btnAdd,btnSearch;
-
+    @FXML
+    JFXListView<VBox> listView;
+    @FXML
+    BorderPane Center;
 
 
     private String namePaneCenter;
@@ -72,13 +74,12 @@ public class ControllerMain_a implements Initializable {
                 }
             }
             if(event.getSource() == btnSearch){
-               NewSearch();
+               Searchstage();
             }
         }
     };
 
-
-    public void NewSearch(){
+    public void Searchstage(){
 
         Stage stage = new Stage();
         stage.setTitle("New Task");
@@ -91,7 +92,7 @@ public class ControllerMain_a implements Initializable {
 
             Parent parent = loader.load();
             loader.setController(controller);
-            Scene scene = new Scene(parent, 600,750);
+            Scene scene = new Scene(parent, 365.0,311.0);
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
@@ -103,7 +104,7 @@ public class ControllerMain_a implements Initializable {
         stage.addEventHandler(WindowEvent.WINDOW_HIDDEN, new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                ReloadCenterContent(namePaneCenter);
+                //ReloadCenterContent(namePaneCenter);
             }
         });
     }
@@ -132,6 +133,7 @@ public class ControllerMain_a implements Initializable {
         stage.addEventHandler(WindowEvent.WINDOW_HIDDEN, new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
+
                 ReloadCenterContent(namePaneCenter);
             }
         });
@@ -155,7 +157,6 @@ public class ControllerMain_a implements Initializable {
         });
     }
 
-
     private void initDrawer(){
         try {
             VBox boxD = FXMLLoader.load(getClass().getResource("../FXML/DrawerXML.fxml"));
@@ -168,7 +169,7 @@ public class ControllerMain_a implements Initializable {
                         public void handle(MouseEvent event) {
                             switch (node.getAccessibleText()){
                                 case "btnInbox" :
-                                    namePaneCenter = "../FXML/Inbox.fxml";
+                                    namePaneCenter = "../FXML/InboxXML.fxml";
                                     ReloadCenterContent(namePaneCenter);
                                     break;
 
@@ -190,6 +191,7 @@ public class ControllerMain_a implements Initializable {
                                 case "bntCalendar":
                                     namePaneCenter = "../FXML/Calendar.fxml";
                                     ReloadCenterContent(namePaneCenter);
+                                    break;
 
                             }
                         }
@@ -201,21 +203,18 @@ public class ControllerMain_a implements Initializable {
         }
     }
 
-    private Parent getCenterContent(String nameP)  {
+    private Parent getParentCenter(String name){
         Parent root = null;
-        try {
-            root = FXMLLoader.load(getClass().getResource(""+ nameP));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        try{
+            root = FXMLLoader.load(getClass().getResource(""+name));
+        }catch (IOException e){e.printStackTrace();}
         return root;
     }
 
-
-    private void ReloadCenterContent(String n){
-        System.out.println("entraste al reload");
-        //BorderPaneM.setCenter(null);
-        BorderPaneM.setCenter(getCenterContent(n));
+    private void ReloadCenterContent(String name){
+        System.out.println("Reload");
+        BorderPaneM.setCenter(getParentCenter(name));
     }
+
 
 }

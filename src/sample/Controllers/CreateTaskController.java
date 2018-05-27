@@ -69,6 +69,7 @@ public class CreateTaskController implements Initializable {
         task.setTitle(FieldTitle.getText());
         task.setNotes(FieldNotes.getText());
         task.setStarFrom(Date.valueOf(Date_S));
+        System.out.println(Date.valueOf(Date_S));
         task.setFinishBy(Date.valueOf(Date_F));
         task.setEstimated_Time(ByFinish);
         task.setTags(FieldTags.getText());

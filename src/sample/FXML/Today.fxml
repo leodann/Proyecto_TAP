@@ -9,7 +9,8 @@
 <?import javafx.scene.text.Font?>
 <?import com.jfoenix.controls.JFXListView?>
 <BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            prefHeight="579.0" prefWidth="919.0">
+            prefHeight="579.0" prefWidth="919.0"
+            fx:controller="sample.Controllers.TodayController">
     <top>
         <Label text="Today" BorderPane.alignment="CENTER">
             <font>

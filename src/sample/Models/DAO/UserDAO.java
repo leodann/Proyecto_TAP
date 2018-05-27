@@ -8,6 +8,7 @@ import java.io.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import sample.Models.User;
@@ -62,6 +63,88 @@ public class UserDAO {
         return users;
     }
 
+    public ObservableList<User> fetchAll(){
+        ObservableList<User> users = FXCollections.observableArrayList();
+        try {
+            String query = "SELECT * FROM users";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            User p = null;
+            int cont =0;
+            while(rs.next()) {
+                File file = new File("C:\\Users\\Loenardo Villanueva\\Desktop\\image"+cont+".png");
+                FileOutputStream fos = new FileOutputStream(file);
+                byte bytes [];
+                Blob blob = rs.getBlob("image");
+                bytes = blob.getBytes(1,(int)blob.length());
+                fos.write(bytes);
+                fos.close();
+
+
+                p = new User(
+                        rs.getBlob("image"),
+                        //rs.getBinaryStream("image"),
+                        rs.getString("Name"),
+                        rs.getString("Adress"),
+                        rs.getString("Phone"),
+                        rs.getString(  "Mail"),
+                        rs.getString("User"),
+                        rs.getString("Password")
+                );
+                users.add(p);
+                cont++;
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }catch (IOException E){E.printStackTrace();}
+        return users;
+    }
+
+    public User fetch(String name_user){
+        User e = null;
+        try {
+            String query = "SELECT * FROM users where User = '" + name_user + "'";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            User p = null;
+            int cont =0;
+            while(rs.next()) {
+                File file = new File("C:\\Users\\Loenardo Villanueva\\Desktop\\image"+cont+".png");
+                FileOutputStream fos = new FileOutputStream(file);
+                byte bytes [];
+                Blob blob = rs.getBlob("image");
+                bytes = blob.getBytes(1,(int)blob.length());
+                fos.write(bytes);
+                fos.close();
+
+
+                e = new User(
+                        rs.getBlob("image"),
+                        //rs.getBinaryStream("image"),
+                        rs.getString("Name"),
+                        rs.getString("Adress"),
+                        rs.getString("Phone"),
+                        rs.getString(  "Mail"),
+                        rs.getString("User"),
+                        rs.getString("Password")
+                );
+                cont++;
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }catch (IOException E){E.printStackTrace();}
+
+        return e;
+    }
+
 
     /* public ObservableList<Employee> fetchAll() {
         ObservableList<Employee> employees = FXCollections.observableArrayList();
@@ -86,28 +169,38 @@ public class UserDAO {
             System.out.println("Error al recuperar información...");
         }
         return employees;
-    }
+    }*/
 
-    public Employee fetch(String no_emp) {
+    /*public User fetch(String name_user) {
         ResultSet rs = null;
-        Employee e = null;
+        User e = null;
         try {
-            String query = "SELECT * FROM employees where emp_no = '" + no_emp + "'";
+            String query = "SELECT * FROM users where User = '" + name_user + "'";
             Statement st = conn.createStatement();
             rs = st.executeQuery(query);
-            e = new Employee(
-                    rs.getInt("no_emp"), rs.getDate("birth_date"),
-                    rs.getString("first_name"), rs.getString("last_name"),
-                    rs.getString("gender").charAt(0), rs.getDate("hire_date")
+            byte [] image = null;
+
+            e = new User(
+
+                    rs.getBlob("image"),
+                    //rs.getBinaryStream("image"),
+                    rs.getString("Name"),
+                    rs.getString("Adress"),
+                    rs.getString("Phone"),
+                    rs.getString(  "Mail"),
+                    rs.getString("User"),
+                    rs.getString("Password")
+
             );
+
         } catch (SQLException ex) {
             ex.printStackTrace();
             System.out.println("Error al recuperar información...");
         }
         return e;
-    }
+    }*/
 
-    public Boolean delete(int no_employee) {
+    /*public Boolean delete(int no_employee) {
         try {
             String query = "delete from employees where emp_no = ?";
             PreparedStatement st = conn.prepareStatement(query);
@@ -124,11 +217,11 @@ public class UserDAO {
         try {
             String query = "insert into users "
                     + " (image,Name, Adress, Phone, Mail, User, Password)"
-                    + " values (?,?, ?, ?, ?, ?, ?)";
+                    + " values (? ,?, ?, ?, ?, ?, ?)";
             PreparedStatement st =  conn.prepareStatement(query);
 
             st.setBinaryStream(1, user.getFis(),user.getLengthBytes());
-            st.setString(       2, user.getName());
+            st.setString(  2, user.getName());
             st.setString(  3, user.getAdress());
             st.setString(  4, user.getPhone());
             st.setString(  5, user.getMail());

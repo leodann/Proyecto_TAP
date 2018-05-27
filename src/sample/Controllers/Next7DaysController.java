@@ -21,9 +21,9 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
-public class InboxController implements Initializable {
+public class Next7DaysController implements Initializable {
     @FXML
-    JFXListView <VBox> listView;
+    JFXListView<VBox> listView;
     @FXML
     Label lblTittle;
 
@@ -48,13 +48,13 @@ public class InboxController implements Initializable {
             Label lblNotas = new Label(listTask.get(i).getNotes().toString());
             lblNotas.setFont(new Font("Arial",20));
             HBox hbox1 = new HBox(   new Label("Category: "+listTask.get(i).getCategory().toString()),
-                                    new Label("Tags: "+listTask.get(i).getTags().toString()),
-                                    new Label("Priority: "+Character.toString(listTask.get(i).getPriority())));
+                    new Label("Tags: "+listTask.get(i).getTags().toString()),
+                    new Label("Priority: "+Character.toString(listTask.get(i).getPriority())));
             hbox1.setSpacing(10);
             hbox1.setAlignment(Pos.CENTER);
             HBox hbox2 = new HBox(  new Label("started: "+formater.format(listTask.get(i).getStarFrom())),
-                                    new Label("finish by: "+ formater.format(listTask.get(i).getFinishBy())),
-                                    new Label("Estimated time: "+ Integer.toString(listTask.get(i).getEstimated_Time())+" hrs"));
+                    new Label("finish by: "+ formater.format(listTask.get(i).getFinishBy())),
+                    new Label("Estimated time: "+ Integer.toString(listTask.get(i).getEstimated_Time())+" hrs"));
             hbox2.setSpacing(10);
             hbox2.setAlignment(Pos.CENTER);
             JFXRadioButton rb = new JFXRadioButton("Done");
@@ -66,7 +66,8 @@ public class InboxController implements Initializable {
     }
 
     private ObservableList initTaskList(){
-        listTask = taskDao.fetchAll();
+        listTask = taskDao.fetchNext7();
+
         return listTask;
     }
 
@@ -79,5 +80,4 @@ public class InboxController implements Initializable {
         listView.setItems(listVbox);
         return listView;
     }
-
 }

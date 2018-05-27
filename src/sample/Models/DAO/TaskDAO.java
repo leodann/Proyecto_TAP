@@ -100,6 +100,133 @@ public class TaskDAO
         return task;
     }
 
+    public ObservableList<Task> fetchTags(String tittle) {
+        ObservableList<Task> task = FXCollections.observableArrayList();
+        try {
+            String query = "SELECT * FROM tasks where Tittle = '" + tittle + "'";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            Task p = null;
+            while(rs.next()) {
+                p = new Task(
+                        rs.getInt("ID"),
+                        rs.getString("Title"),
+                        rs.getInt("Estimated_Time"),
+                        rs.getDate("StarFrom"),
+                        rs.getDate("FinishBy"),
+                        rs.getString("Tags"),
+                        rs.getString("Priority").charAt(0),
+                        rs.getString("Category"),
+                        rs.getString("Notes")
+                );
+                task.add(p);
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }
+        return task;
+    }
+
+    public ObservableList<Task> fetchByDate(String das) {
+        ObservableList<Task> task = FXCollections.observableArrayList();
+        System.out.println(das+"fetchall");
+        String date = "'2018-05-26'";
+        try {
+            String query = "SELECT * FROM tasks WHERE StarFrom LIKE "+ das;
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            Task p = null;
+            while(rs.next()) {
+                p = new Task(
+                        rs.getInt("ID"),
+                        rs.getString("Title"),
+                        rs.getInt("Estimated_Time"),
+                        rs.getDate("StarFrom"),
+                        rs.getDate("FinishBy"),
+                        rs.getString("Tags"),
+                        rs.getString("Priority").charAt(0),
+                        rs.getString("Category"),
+                        rs.getString("Notes")
+                );
+                task.add(p);
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }
+        System.out.println("qweqweqweqwe");
+        return task;
+    }
+
+    public ObservableList<Task> fetchToday() {
+        ObservableList<Task> task = FXCollections.observableArrayList();
+        try {
+            String query = "SELECT * FROM tasks WHERE StarFrom = CAST(CURRENT_TIMESTAMP AS DATE)";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            Task p = null;
+            while(rs.next()) {
+                p = new Task(
+                        rs.getInt("ID"),
+                        rs.getString("Title"),
+                        rs.getInt("Estimated_Time"),
+                        rs.getDate("StarFrom"),
+                        rs.getDate("FinishBy"),
+                        rs.getString("Tags"),
+                        rs.getString("Priority").charAt(0),
+                        rs.getString("Category"),
+                        rs.getString("Notes")
+                );
+                task.add(p);
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }
+        return task;
+    }
+
+    public ObservableList<Task> fetchNext7() {
+        ObservableList<Task> task = FXCollections.observableArrayList();
+        try {
+            String query = "SELECT * FROM tasks WHERE StarFrom >= NOW() AND StarFrom <= NOW() + INTERVAL 7 DAY";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            Task p = null;
+            while(rs.next()) {
+                p = new Task(
+                        rs.getInt("ID"),
+                        rs.getString("Title"),
+                        rs.getInt("Estimated_Time"),
+                        rs.getDate("StarFrom"),
+                        rs.getDate("FinishBy"),
+                        rs.getString("Tags"),
+                        rs.getString("Priority").charAt(0),
+                        rs.getString("Category"),
+                        rs.getString("Notes")
+                );
+                task.add(p);
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }
+        return task;
+    }
+
     /*public Employee fetch(String no_emp) {
         ResultSet rs = null;
         Employee e = null;
