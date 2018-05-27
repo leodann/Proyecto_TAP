@@ -43,7 +43,7 @@ public class ControllerMain_a implements Initializable {
     @FXML
     BorderPane BorderPaneM;
     @FXML
-    Button btnAdd,btnSearch;
+    Button btnAdd,btnSearch, btnPrint;
 
 
 
@@ -58,6 +58,7 @@ public class ControllerMain_a implements Initializable {
         ReloadCenterContent(namePaneCenter);
         btnAdd.setOnAction(handler);
         btnSearch.setOnAction(handler);
+        btnPrint.setOnAction(handler);
 
     }
 
@@ -73,6 +74,11 @@ public class ControllerMain_a implements Initializable {
             }
             if(event.getSource() == btnSearch){
                NewSearch();
+            }
+
+            if(event.getSource() == btnPrint){
+                System.out.println("pinta");
+                Print();
             }
         }
     };
@@ -216,6 +222,26 @@ public class ControllerMain_a implements Initializable {
         System.out.println("entraste al reload");
         //BorderPaneM.setCenter(null);
         BorderPaneM.setCenter(getCenterContent(n));
+    }
+
+    public void Print(){
+        Stage stage = new Stage();
+        stage.setTitle("Report");
+        stage.setResizable(false);
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/Print.fxml"));
+        PrintController controller = new PrintController();
+
+        try {
+            Parent parent = loader.load();
+            loader.setController(controller);
+            Scene scene = new Scene(parent, 600, 450);
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

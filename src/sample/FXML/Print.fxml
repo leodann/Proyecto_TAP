@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:controller="sample.Controllers.PrintController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="284.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    
+        <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="74.0" prefWidth="600.0" text="TaskManager" textAlignment="CENTER" textFill="#1194ab">
+            <font>
+                <Font size="28.0" />
+            </font>
+            <graphic>
+                <MaterialDesignIconView fill="#1194ab" glyphName="BOOK_OPEN" glyphSize="30" />
+            </graphic>
+        </Label>
+
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10" BorderPane.alignment="CENTER" />
+      <HBox layoutX="3.0" layoutY="84.0" prefHeight="62.0" prefWidth="600.0" spacing="35.0">
+         <children>
+            <Label text="Print From" />
+            <JFXDatePicker fx:id="fechainicio"/>
+            <Label text="By" />
+            <JFXDatePicker fx:id="fechafin" />
+         </children>
+      </HBox>
+      <JFXButton fx:id="print" layoutX="268.0" layoutY="155.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="70.0" ripplerFill="WHITE" style="-fx-background-color: #1194ab;" text="Print" textFill="WHITE" />
+   <Label layoutX="295.0" layoutY="200.0" text="Or" />
+   <JFXButton fx:id="printall" layoutX="268.0" layoutY="241.0" mnemonicParsing="false" style="-fx-background-color: #1194ab;" text="Print All" textFill="WHITE" />
+
+    
+
+
+
+
+
+
+
+
+
+</AnchorPane>

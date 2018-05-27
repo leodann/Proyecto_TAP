@@ -20,8 +20,8 @@ public class MySQL {
 
     public static void Connect() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://"+ hostname +":3306/" + dbname, dbuser, dbpass);
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://"+ hostname +":3306/" + dbname+"?useSSL=false&useLegacyDatetimeCode=false&serverTimezone=America/Mexico_City", dbuser, dbpass);
             System.out.println("Se ha iniciado la conexión con el servidor de forma exitosa");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(MySQL.class.getName()).log(Level.SEVERE, null, ex);

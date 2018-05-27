@@ -21,7 +21,7 @@ public class UserDAO {
         this.conn = conn;
     }
 
-   public List<User> findAll() {
+    public List<User> findAll() {
         List<User> users = new ArrayList<User>();
         try {
             String query = "SELECT * FROM users";
@@ -30,7 +30,7 @@ public class UserDAO {
             User p = null;
             int cont =0;
             while(rs.next()) {
-                File file = new File("C:\\Users\\Loenardo Villanueva\\Desktop\\image"+cont+".png");
+                File file = new File("C:\\Users\\alexs\\Pictures\\image"+cont+".png");
                 FileOutputStream fos = new FileOutputStream(file);
                 byte bytes [];
                 Blob blob = rs.getBlob("image");

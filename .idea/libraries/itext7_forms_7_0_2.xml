@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="itext7-forms-7.0.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/itext7-forms-7.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/itext7-io-7.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/itext7-kernel-7.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/itext7-layout-7.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/itext7-pdfa-7.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/itext7-pdftest-7.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
