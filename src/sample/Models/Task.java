@@ -13,11 +13,12 @@ public class Task {
     char Priority;
     String Category;
     String Notes;
+    boolean Status, Focus;
 
     public Task(){
 
     }
-    public Task(int id,String title, int estimated_Time, Date starFrom, Date finishBy, String tags, char priority, String category, String notes) {
+    public Task(int id,String title, int estimated_Time, Date starFrom, Date finishBy, String tags, char priority, String category, String notes,boolean status, boolean focus) {
         ID = id;
         Title = title;
         Estimated_Time = estimated_Time;
@@ -27,6 +28,8 @@ public class Task {
         Priority = priority;
         Category = category;
         Notes = notes;
+        Status= status;
+        Focus = focus;
     }
 
     public String getTitle() {
@@ -99,5 +102,21 @@ public class Task {
 
     public void setID(int ID) {
         this.ID = ID;
+    }
+
+    public boolean isStatus() {
+        return Status;
+    }
+
+    public void setStatus(boolean status) {
+        Status = status;
+    }
+
+    public boolean isFocus() {
+        return Focus;
+    }
+
+    public void setFocus(boolean focus) {
+        Focus = focus;
     }
 }

@@ -14,6 +14,7 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import jfxtras.scene.layout.HBox;
@@ -83,8 +84,49 @@ public class CalendarController implements Initializable {
                         new Label("Estimated time: " + Integer.toString(listTask.get(i).getEstimated_Time()) + " hrs"));
                 hbox2.setSpacing(10);
                 hbox2.setAlignment(Pos.CENTER);
+                javafx.scene.layout.HBox hbox3 = new javafx.scene.layout.HBox();
+                hbox3.setSpacing(20);
                 JFXRadioButton rb = new JFXRadioButton("Done");
-                vbox.getChildren().addAll(lblTitulo, lblNotas, hbox1, hbox2, rb);
+                boolean bool;
+                if(listTask.get(i).isStatus() != false){
+                    bool = true;
+                }else{
+                    bool = false;
+                }
+                rb.setSelected(bool);
+                Task ta = listTask.get(i);
+                rb.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        if(ta.isStatus() ==  true) {
+                            ta.setStatus(false);
+                        }else{ta.setStatus(true);}
+
+                        taskDao.update(ta);
+                        System.out.println(ta.isStatus());
+                    }
+                });
+                JFXRadioButton rbF = new JFXRadioButton("Focus");
+                boolean boolF;
+                if(listTask.get(i).isFocus() != false){
+                    boolF = true;
+                }else{
+                    boolF = false;
+                }
+                rbF.setSelected(boolF);
+                rbF.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        if(ta.isFocus() ==  true) {
+                            ta.setFocus(false);
+                        }else{ta.setFocus(true);}
+
+                        taskDao.update(ta);
+                        System.out.println(ta.isFocus());
+                    }
+                });
+                hbox3.getChildren().addAll(rb,rbF);
+                vbox.getChildren().addAll(lblTitulo, lblNotas, hbox1, hbox2, hbox3);
                 listVbox.add(vbox);
             }
             initListView();

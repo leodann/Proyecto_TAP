@@ -2,27 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/TodayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Manage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Controllers/OnFocusController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto_TAP/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto_TAP/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proyecto_TAP/sample/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controllers/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controllers/InboxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/InboxController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Calendar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Calendar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/CreateTask.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/CreateTask.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/InboxXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/InboxXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Main_a.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Main_a.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Next7Days.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Next7Days.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Search.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Today.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Today.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/TodayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/TodayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Models/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/Task.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,21 +78,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Calendar.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/FXML/Calendar.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+      <file leaf-file-name="TaskDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+            <state relative-caret-position="384">
+              <caret line="260" column="26" lean-forward="true" selection-start-line="260" selection-start-column="26" selection-end-line="260" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <file leaf-file-name="OnFocusController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/OnFocusController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="193">
+              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#makeListVbox#0;class#OnFocusController#0" />
+                <element signature="method#initTaskList#0;class#OnFocusController#0" />
+                <element signature="method#initListView#0;class#OnFocusController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnFocus.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Next7DaysController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="103" column="74" selection-start-line="103" selection-start-column="74" selection-end-line="103" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,11 +124,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalendarController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InboxController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/InboxController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="66" column="36" lean-forward="true" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalendarController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CalendarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1776">
-              <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+            <state relative-caret-position="630">
+              <caret line="128" column="82" selection-start-line="128" selection-start-column="82" selection-end-line="128" selection-end-column="82" />
               <folding>
                 <element signature="method#Alert#0;class#CalendarController#0" />
                 <element signature="method#getStringMonth#0;class#CalendarController#0" />
@@ -126,11 +149,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InboxController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/InboxController.java">
+      <file leaf-file-name="TodayController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/TodayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+            <state relative-caret-position="414">
+              <caret line="102" column="74" selection-start-line="102" selection-start-column="74" selection-end-line="102" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,44 +164,18 @@
       <file leaf-file-name="Task.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Models/Task.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogIn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/LogIn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1096">
-              <caret line="109" column="9" lean-forward="true" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="138" column="75" lean-forward="true" selection-start-line="138" selection-start-column="75" selection-end-line="138" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControllerMain_a.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="158" selection-start-line="158" selection-end-line="158" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateTaskController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+            <state relative-caret-position="328">
+              <caret line="107" column="22" lean-forward="true" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+              <folding>
+                <element signature="e#2010#2011#0" expanded="true" />
+                <element signature="e#2039#2040#0" expanded="true" />
+                <element signature="e#2084#2085#0" expanded="true" />
+                <element signature="e#2115#2116#0" expanded="true" />
+                <element signature="e#2192#2193#0" expanded="true" />
+                <element signature="e#2220#2221#0" expanded="true" />
+                <element signature="e#2263#2264#0" expanded="true" />
+                <element signature="e#2292#2293#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -215,7 +215,6 @@
         <option value="$PROJECT_DIR$/src/sample/Controllers/TaskController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Next7.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/ViewerController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Models/Task.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/DrawerXML.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/ToolTipBar.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/ToolTipBarL.fxml" />
@@ -226,11 +225,9 @@
         <option value="$PROJECT_DIR$/src/sample/Controllers/LogIn.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/SignUp.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Task.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml" />
         <option value="$PROJECT_DIR$/src/sample/MySQL.java" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/SignUp.java" />
         <option value="$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/CreateTask.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Search.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/SearchController.java" />
@@ -238,15 +235,19 @@
         <option value="$PROJECT_DIR$/src/sample/Manage.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Main_a.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Next7Days.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/TodayController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Today.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/InboxController.java" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Calendar.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/Models/Task.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/InboxController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/CalendarController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/TodayController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/OnFocusController.java" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml" />
       </list>
     </option>
   </component>
@@ -294,7 +295,22 @@
               <item name="Proyecto_TAP" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="FXML" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto_TAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto_TAP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proyecto_TAP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proyecto_TAP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -579,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527295604079</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Cada vez más cerca.">
+      <created>1527391322534</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1527391322534</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -596,22 +619,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3288889" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32763532" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50065106" side_tool="true" weight="0.5324138" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32965517" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49934897" weight="0.28917378" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.28917378" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16778524" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.31208053" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -686,7 +710,8 @@
     <MESSAGE value="BetaVersion 1.08." />
     <MESSAGE value="BetaVersion 1.08. con unos cuantos errorsillos" />
     <MESSAGE value="Como que no te corre HDP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Como que no te corre HDP" />
+    <MESSAGE value="Cada vez más cerca." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cada vez más cerca." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -698,13 +723,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ViewerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -789,14 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -915,39 +925,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/TodayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/Main_a.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="97" column="53" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/DrawerXML.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="81" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,23 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Models/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/LogIn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1096">
@@ -993,13 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
           <caret line="176" selection-start-line="176" selection-end-line="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="138" column="75" lean-forward="true" selection-start-line="138" selection-start-column="75" selection-end-line="138" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -1020,22 +978,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
+        <state relative-caret-position="744">
           <caret line="158" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/DrawerXML.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="103" column="74" selection-start-line="103" selection-start-column="74" selection-end-line="103" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/InboxController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="64" column="23" selection-start-line="64" selection-start-column="23" selection-end-line="64" selection-end-column="23" />
+        <state relative-caret-position="54">
+          <caret line="66" column="36" lean-forward="true" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CalendarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1776">
-          <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+        <state relative-caret-position="630">
+          <caret line="128" column="82" selection-start-line="128" selection-start-column="82" selection-end-line="128" selection-end-column="82" />
           <folding>
             <element signature="method#Alert#0;class#CalendarController#0" />
             <element signature="method#getStringMonth#0;class#CalendarController#0" />
@@ -1043,6 +1026,61 @@
             <element signature="method#getStringYear#0;class#CalendarController#0" />
             <element signature="method#initCalendarlbls#0;class#CalendarController#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/TodayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="102" column="74" selection-start-line="102" selection-start-column="74" selection-end-line="102" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Models/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="107" column="22" lean-forward="true" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
+          <folding>
+            <element signature="e#2010#2011#0" expanded="true" />
+            <element signature="e#2039#2040#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2115#2116#0" expanded="true" />
+            <element signature="e#2192#2193#0" expanded="true" />
+            <element signature="e#2220#2221#0" expanded="true" />
+            <element signature="e#2263#2264#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="260" column="26" lean-forward="true" selection-start-line="260" selection-start-column="26" selection-end-line="260" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/OnFocusController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#makeListVbox#0;class#OnFocusController#0" />
+            <element signature="method#initTaskList#0;class#OnFocusController#0" />
+            <element signature="method#initListView#0;class#OnFocusController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
         </state>
       </provider>
     </entry>

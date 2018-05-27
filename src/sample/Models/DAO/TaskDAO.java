@@ -25,9 +25,18 @@ public class TaskDAO
             ResultSet rs = st.executeQuery(query);
             Task p = null;
             while(rs.next()) {
-                p = new Task(rs.getInt("ID"),rs.getString("title"),rs.getInt("Estimated_Time"),rs.getDate("StarFrom"),
-                        rs.getDate("FinishBy"),rs.getString("Tags"),rs.getString("Priority").charAt(0),
-                        rs.getString("Category"),rs.getString("Notes")
+                p = new Task(
+                        rs.getInt("ID"),
+                        rs.getString("title"),
+                        rs.getInt("Estimated_Time"),
+                        rs.getDate("StarFrom"),
+                        rs.getDate("FinishBy"),
+                        rs.getString("Tags"),
+                        rs.getString("Priority").charAt(0),
+                        rs.getString("Category"),
+                        rs.getString("Notes"),
+                        rs.getBoolean("Status"),
+                        rs.getBoolean("Focus")
                 );
                 tasks.add(p);
             }
@@ -43,8 +52,8 @@ public class TaskDAO
 
     public Boolean update(Task task) {
         try {
-            String query = "update transaction "
-                    + " set category = ?, description = ?, date_created = ?, amount = ?, type = ?"
+            String query = "update tasks "
+                    + " set Title = ?, Estimated_Time = ?, StarFrom = ?, FinishBy = ?, Tags = ?, Priority = ?, Category = ?, Notes = ?, Status = ?, Focus = ? "
                     + " where id=?";
             System.out.println(query + "updating....");
             PreparedStatement st =  conn.prepareStatement(query);
@@ -57,9 +66,13 @@ public class TaskDAO
             st.setString(  6, String.valueOf(task.getPriority()));
             st.setString(  7, task.getCategory());
             st.setString(  8, task.getNotes());
-            st.setInt   (  9, task.getID());
+            st.setBoolean( 9,task.isStatus());
+            st.setBoolean(10,task.isFocus());
+            st.setInt   (  11, task.getID());
             st.execute();
+            System.out.println("NICE");
             return true;
+
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
@@ -86,7 +99,9 @@ public class TaskDAO
                         rs.getString("Tags"),
                         rs.getString("Priority").charAt(0),
                         rs.getString("Category"),
-                        rs.getString("Notes")
+                        rs.getString("Notes"),
+                        rs.getBoolean("Status"),
+                        rs.getBoolean("Focus")
                 );
                 task.add(p);
             }
@@ -117,7 +132,9 @@ public class TaskDAO
                         rs.getString("Tags"),
                         rs.getString("Priority").charAt(0),
                         rs.getString("Category"),
-                        rs.getString("Notes")
+                        rs.getString("Notes"),
+                        rs.getBoolean("Status"),
+                        rs.getBoolean("Focus")
                 );
                 task.add(p);
             }
@@ -150,7 +167,9 @@ public class TaskDAO
                         rs.getString("Tags"),
                         rs.getString("Priority").charAt(0),
                         rs.getString("Category"),
-                        rs.getString("Notes")
+                        rs.getString("Notes"),
+                        rs.getBoolean("Status"),
+                        rs.getBoolean("Focus")
                 );
                 task.add(p);
             }
@@ -182,7 +201,9 @@ public class TaskDAO
                         rs.getString("Tags"),
                         rs.getString("Priority").charAt(0),
                         rs.getString("Category"),
-                        rs.getString("Notes")
+                        rs.getString("Notes"),
+                        rs.getBoolean("Status"),
+                        rs.getBoolean("Focus")
                 );
                 task.add(p);
             }
@@ -213,12 +234,50 @@ public class TaskDAO
                         rs.getString("Tags"),
                         rs.getString("Priority").charAt(0),
                         rs.getString("Category"),
-                        rs.getString("Notes")
+                        rs.getString("Notes"),
+                        rs.getBoolean("Status"),
+                        rs.getBoolean("Focus")
                 );
                 task.add(p);
             }
             rs.close();
             st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }
+        return task;
+    }
+
+
+    public ObservableList<Task> fetchFocus() {
+        ObservableList<Task> task = FXCollections.observableArrayList();
+        System.out.println("ONFOCUSFETCH");
+        try {
+            String query = "SELECT * FROM tasks WHERE Focus = '1'";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            Task p = null;
+            while(rs.next()) {
+                p = new Task(
+                        rs.getInt("ID"),
+                        rs.getString("Title"),
+                        rs.getInt("Estimated_Time"),
+                        rs.getDate("StarFrom"),
+                        rs.getDate("FinishBy"),
+                        rs.getString("Tags"),
+                        rs.getString("Priority").charAt(0),
+                        rs.getString("Category"),
+                        rs.getString("Notes"),
+                        rs.getBoolean("Status"),
+                        rs.getBoolean("Focus")
+                );
+                task.add(p);
+            }
+            rs.close();
+            st.close();
+            System.out.println(task.get(0).isFocus());
 
         } catch (SQLException ex) {
             ex.printStackTrace();
