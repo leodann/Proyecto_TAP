@@ -14,6 +14,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import sample.Main;
+import sample.Manage;
 import sample.Models.DAO.UserDAO;
 import sample.Models.User;
 import sample.MySQL;
@@ -62,7 +63,8 @@ public class LogIn implements Initializable
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
-    {
+    {   //Se inicializa la variable static_user en null
+        Manage.statci_user = null;
         signup.setOnAction(listener);
         login.setOnAction(listener);
     }
@@ -92,8 +94,10 @@ public class LogIn implements Initializable
         }
         if(cont == 1)
         {
+            //Se guarda el usuario que ingreso en la variable static_user para poderlo usar posteriormente.
+            Manage.statci_user = aux;
+            System.out.println(""+Manage.statci_user.getUser());
             try {
-                //Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/MainScene.fxml"));
                 Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/Main_a.fxml"));
                 Stage StageP1;
                 Scene scene = new Scene(mainscene,1120,720);
