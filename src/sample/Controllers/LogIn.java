@@ -73,7 +73,7 @@ public class LogIn implements Initializable
     {
         Parent signup = FXMLLoader.load(getClass().getResource("../FXML/SignUp.fxml"));
         Stage StageP1;
-        Scene scene = new Scene(signup,600,420);
+        Scene scene = new Scene(signup,650,440);
         StageP1 = Main.homeS;
         StageP1.setScene(scene);
         StageP1.setResizable(true);
