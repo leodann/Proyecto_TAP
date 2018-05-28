@@ -18,6 +18,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import jfxtras.scene.layout.HBox;
+import sample.Manage;
 import sample.Models.DAO.TaskDAO;
 import sample.Models.Task;
 import sample.MySQL;
@@ -137,11 +138,12 @@ public class CalendarController implements Initializable {
     }
 
     private ObservableList initTaskList(){
+        Manage manage = new Manage();
         LocalDate localDate = dpTask.getValue();
         if(localDate!=null) {
             java.sql.Date das = java.sql.Date.valueOf(localDate);
             String d = "'" + das.toString() + "'";
-            listTask = taskDao.fetchByDate(d);
+            listTask = taskDao.fetchByDate(d, manage.statci_user.getUser());
         }else{ Alert();}
         return listTask;
     }

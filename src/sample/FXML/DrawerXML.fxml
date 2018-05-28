@@ -5,21 +5,18 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="634.0" prefWidth="224.0"
-      xmlns="http://javafx.com/javafx/8.0.121"
-      xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="sample.Controllers.ViewerController">
+<VBox prefHeight="634.0" prefWidth="224.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ViewerController">
 
-    <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="200.0" prefWidth="224.0" text="Task Manager">
+    <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="200.0" prefWidth="224.0" text="Task Manager" textFill="#1194ab">
         <graphic>
-            <MaterialDesignIconView glyphName="BOOK_OPEN" glyphSize="20" />
+            <MaterialDesignIconView fill="1194ab" glyphName="BOOK_OPEN" glyphSize="20" />
         </graphic>
     </Label>
 
-    <JFXButton fx:id="btnInbox" prefHeight="126.8" prefWidth="224.0" text="Inbox" accessibleText="btnInbox"/>
-    <JFXButton fx:id="btnToday" prefHeight="126.8" prefWidth="224.0" text="Today" accessibleText="btnToday"/>
-    <JFXButton fx:id="btnN7" prefHeight="126.8" prefWidth="224.0" text="Next 7 days" accessibleText="btnN7"/>
-    <JFXButton fx:id="btnOnf" prefHeight="126.8" prefWidth="224.0" text="On focus" accessibleText="btnOnF"/>
-    <JFXButton fx:id="btnCalendar" prefHeight="126.8" prefWidth="224.0" text="Calendar" accessibleText="bntCalendar"/>
+    <JFXButton fx:id="btnInbox" accessibleText="btnInbox" prefHeight="126.8" prefWidth="224.0" text="Inbox" textFill="#1194ab" />
+    <JFXButton fx:id="btnToday" accessibleText="btnToday" prefHeight="126.8" prefWidth="224.0" text="Today" textFill="#1194ab" />
+    <JFXButton fx:id="btnN7" accessibleText="btnN7" prefHeight="126.8" prefWidth="224.0" text="Next 7 days" textFill="#1194ab" />
+    <JFXButton fx:id="btnOnf" accessibleText="btnOnF" prefHeight="126.8" prefWidth="224.0" text="On focus" textFill="#1194ab" />
+    <JFXButton fx:id="btnCalendar" accessibleText="bntCalendar" prefHeight="126.8" prefWidth="224.0" text="Calendar" textFill="#1194ab" />
 
 </VBox>

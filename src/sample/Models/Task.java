@@ -5,7 +5,7 @@ import java.util.Date;
 public class Task {
 
     int ID;
-    String Title;
+    String Title, User;
     int Estimated_Time;
     Date StarFrom;
     Date FinishBy;
@@ -18,7 +18,7 @@ public class Task {
     public Task(){
 
     }
-    public Task(int id,String title, int estimated_Time, Date starFrom, Date finishBy, String tags, char priority, String category, String notes,boolean status, boolean focus) {
+    public Task(int id,String title, int estimated_Time, Date starFrom, Date finishBy, String tags, char priority, String category, String notes,boolean status, boolean focus, String user) {
         ID = id;
         Title = title;
         Estimated_Time = estimated_Time;
@@ -30,6 +30,15 @@ public class Task {
         Notes = notes;
         Status= status;
         Focus = focus;
+        User = user;
+    }
+
+    public String getUser() {
+        return User;
+    }
+
+    public void setUser(String user) {
+        User = user;
     }
 
     public String getTitle() {

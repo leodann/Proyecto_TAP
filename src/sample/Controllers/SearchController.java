@@ -26,7 +26,7 @@ public class SearchController implements Initializable {
     private JFXRadioButton selected;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Manage.static_search = "tittle";
+        Manage.static_search = "title";
         btnSearch.setOnAction(handler);
     }
 
@@ -40,7 +40,7 @@ public class SearchController implements Initializable {
                     Manage.static_word = tfSearch.getText();
                     System.out.println(Manage.static_search);
                 }else{
-                    Manage.static_search = "tittle";
+                    Manage.static_search = "title";
                     Manage.static_word = tfSearch.getText();
                     System.out.println(Manage.static_search);
                 }

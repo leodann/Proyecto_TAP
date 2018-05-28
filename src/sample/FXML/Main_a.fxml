@@ -3,16 +3,16 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXListView?>
 <?import com.jfoenix.controls.JFXToolbar?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Label?>
-<?import com.jfoenix.controls.JFXListView?>
 <BorderPane fx:id="BorderPaneM" prefHeight="720.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerMain_a">
 
     <top>
@@ -21,7 +21,7 @@
             <HBox>
                 <JFXButton fx:id="btnAdd" contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="Add">
                     <graphic>
-                        <MaterialDesignIconView glyphName="PLUS" glyphSize="30" />
+                        <MaterialDesignIconView fill="1194ab" glyphName="PLUS" glyphSize="30" />
                     </graphic>
                     <font>
                         <Font size="20.0" />
@@ -30,7 +30,7 @@
 
                 <JFXButton fx:id="btnSearch" contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="Search">
                     <graphic>
-                        <FontAwesomeIconView glyphName="SEARCH" glyphSize="30" />
+                        <FontAwesomeIconView fill="1194ab" glyphName="SEARCH" glyphSize="30" />
                     </graphic>
                     <font>
                         <Font size="20.0" />
@@ -39,18 +39,27 @@
 
                 <JFXButton fx:id="btnPrint" contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="Print">
                     <graphic>
-                        <FontAwesomeIconView glyphName="PRINT" glyphSize="30" />
+                        <FontAwesomeIconView fill="1194ab" glyphName="PRINT" glyphSize="30" />
                     </graphic>
                     <font>
                         <Font size="20.0" />
                     </font>
                 </JFXButton>
+               <HBox fx:id="label" prefHeight="100.0" prefWidth="200.0" />
+                <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="233.0" prefWidth="784.0" text="Task Manager" textFill="#1194ab">
+                    <graphic>
+                        <MaterialDesignIconView fill="1194ab" glyphName="BOOK_OPEN" glyphSize="50" text="" />
+                    </graphic>
+                  <font>
+                     <Font size="35.0" />
+                  </font>
+                </Label>
             </HBox>
          </center>
          <left>
-               <JFXHamburger fx:id="Hamburger" alignment="TOP_LEFT" prefHeight="180.0" prefWidth="201.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <JFXHamburger fx:id="Hamburger" alignment="TOP_LEFT" prefHeight="192.0" prefWidth="201.0" spacing="5.0" BorderPane.alignment="CENTER">
                    <padding>
-                       <Insets left="10.0" top="10.0" />
+                       <Insets bottom="80.0" left="80.0" right="50.0" top="60.0" />
                    </padding>
                </JFXHamburger>
          </left>
@@ -58,7 +67,7 @@
             <HBox>
                 <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="GitHub">
                     <graphic>
-                        <MaterialDesignIconView glyphName="GITHUB_CIRCLE" glyphSize="30" />
+                        <MaterialDesignIconView fill="1194ab" glyphName="GITHUB_CIRCLE" glyphSize="30" />
                     </graphic>
                     <font>
                         <Font size="20.0" />
@@ -66,7 +75,7 @@
                 </JFXButton>
                 <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="About Us">
                     <graphic>
-                        <MaterialDesignIconView glyphName="HELP_CIRCLE" glyphSize="30" />
+                        <MaterialDesignIconView fill="1194ab" glyphName="HELP_CIRCLE" glyphSize="30" />
                     </graphic>
                     <font>
                         <Font size="20.0" />
@@ -75,7 +84,7 @@
 
                 <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="USER">
                     <graphic>
-                        <MaterialDesignIconView glyphName="HELP_CIRCLE" glyphSize="30" />
+                        <MaterialDesignIconView fill="1194ab" glyphName="HELP_CIRCLE" glyphSize="30" />
                     </graphic>
                     <font>
                         <Font size="20.0" />
@@ -95,7 +104,7 @@
     <center>
         <BorderPane fx:id="Center">
             <top>
-                <Label fx:id="lblTittle" text="   "/>
+                <Label fx:id="lblTittle" text="   " />
             </top>
             <center>
                 <JFXListView fx:id="listView">

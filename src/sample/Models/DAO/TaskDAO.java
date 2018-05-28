@@ -2,6 +2,7 @@ package sample.Models.DAO;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import sample.Manage;
 import sample.Models.Task;
 import sample.Models.User;
 
@@ -17,10 +18,10 @@ public class TaskDAO
         this.conn = conn;
     }
 
-    public List<Task> findAll() {
+    public List<Task> findAll(String user) {
         List<Task> tasks = new ArrayList<Task>();
         try {
-            String query = "SELECT * FROM tasks limit 1000";
+            String query = "SELECT * FROM tasks limit 1000 where User = '" + user +"'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -36,7 +37,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 tasks.add(p);
             }
@@ -82,10 +84,10 @@ public class TaskDAO
     }
 
 
-    public ObservableList<Task> fetchAll() {
+    public ObservableList<Task> fetchAll(String user) {
         ObservableList<Task> task = FXCollections.observableArrayList();
         try {
-            String query = "SELECT * FROM tasks";
+            String query = "SELECT * FROM tasks where User = '" + user +"'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -101,7 +103,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -115,10 +118,10 @@ public class TaskDAO
         return task;
     }
 
-    public ObservableList<Task> fetchTags(String tittle) {
+    public ObservableList<Task> fetchTags(String tittle, String user) {
         ObservableList<Task> task = FXCollections.observableArrayList();
         try {
-            String query = "SELECT * FROM tasks where Tittle = '" + tittle + "'";
+            String query = "SELECT * FROM tasks where Tittle = '" + tittle + "'" + "and User = '" +user+ "'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -134,7 +137,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -148,12 +152,12 @@ public class TaskDAO
         return task;
     }
 
-    public ObservableList<Task> fetchByDate(String das) {
+    public ObservableList<Task> fetchByDate(String das, String user) {
         ObservableList<Task> task = FXCollections.observableArrayList();
         System.out.println(das+"fetchall");
         String date = "'2018-05-26'";
         try {
-            String query = "SELECT * FROM tasks WHERE StarFrom LIKE "+ das;
+            String query = "SELECT * FROM tasks WHERE StarFrom LIKE "+ das + "and User = '" +user+ "'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -169,7 +173,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -184,10 +189,10 @@ public class TaskDAO
         return task;
     }
 
-    public ObservableList<Task> fetchToday() {
+    public ObservableList<Task> fetchToday(String user) {
         ObservableList<Task> task = FXCollections.observableArrayList();
         try {
-            String query = "SELECT * FROM tasks WHERE StarFrom = CAST(CURRENT_TIMESTAMP AS DATE)";
+            String query = "SELECT * FROM tasks WHERE StarFrom = CAST(CURRENT_TIMESTAMP AS DATE) and User = '" +user+ "'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -203,7 +208,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -217,10 +223,10 @@ public class TaskDAO
         return task;
     }
 
-    public ObservableList<Task> fetchNext7() {
+    public ObservableList<Task> fetchNext7(String user) {
         ObservableList<Task> task = FXCollections.observableArrayList();
         try {
-            String query = "SELECT * FROM tasks WHERE StarFrom >= NOW() AND StarFrom <= NOW() + INTERVAL 7 DAY";
+            String query = "SELECT * FROM tasks WHERE StarFrom >= NOW() AND StarFrom <= NOW() + INTERVAL 7 DAY and User = '" +user+ "'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -236,7 +242,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -251,11 +258,11 @@ public class TaskDAO
     }
 
 
-    public ObservableList<Task> fetchFocus() {
+    public ObservableList<Task> fetchFocus(String user) {
         ObservableList<Task> task = FXCollections.observableArrayList();
         System.out.println("ONFOCUSFETCH");
         try {
-            String query = "SELECT * FROM tasks WHERE Focus = '1'";
+            String query = "SELECT * FROM tasks WHERE Focus = '1' and User = '" +user+"'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -271,7 +278,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -286,43 +294,11 @@ public class TaskDAO
         return task;
     }
 
-    /*public Employee fetch(String no_emp) {
-        ResultSet rs = null;
-        Employee e = null;
-        try {
-            String query = "SELECT * FROM employees where emp_no = '" + no_emp + "'";
-            Statement st = conn.createStatement();
-            rs = st.executeQuery(query);
-            e = new Employee(
-                    rs.getInt("no_emp"), rs.getDate("birth_date"),
-                    rs.getString("first_name"), rs.getString("last_name"),
-                    rs.getString("gender").charAt(0), rs.getDate("hire_date")
-            );
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            System.out.println("Error al recuperar información...");
-        }
-        return e;
-    }
-
-    public Boolean delete(int no_employee) {
-        try {
-            String query = "delete from employees where emp_no = ?";
-            PreparedStatement st = conn.prepareStatement(query);
-            st.setInt(1, no_employee);
-            st.execute();
-            return true;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return false;
-    }
-*/
     public Boolean insert(Task task) {
         try {
             String query = "insert into tasks "
-                    + " (Title, Estimated_Time, StarFrom, FinishBy, Tags, Priority, Category, Notes)"
-                    + " values (?, ?, ?, ?, ?, ?, ?, ?)";
+                    + " (Title, Estimated_Time, StarFrom, FinishBy, Tags, Priority, Category, Notes, User)"
+                    + " values (?, ?, ?, ?, ?, ?, ?, ?,?)";
             PreparedStatement st =  conn.prepareStatement(query);
 
             st.setString(  1, task.getTitle());
@@ -333,6 +309,7 @@ public class TaskDAO
             st.setString(  6, String.valueOf(task.getPriority()));
             st.setString(  7, task.getCategory());
             st.setString(  8, task.getNotes());
+            st.setString(9,task.getUser());
             st.execute();
             return true;
         } catch (Exception e) {

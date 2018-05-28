@@ -115,7 +115,8 @@ public class InboxController implements Initializable {
     }
 
     private ObservableList initTaskList(){
-        listTask = taskDao.fetchAll();
+        Manage manage = new Manage();
+        listTask = taskDao.fetchAll(manage.statci_user.getUser());
         return listTask;
     }
 

@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import sample.Manage;
 import sample.Models.DAO.TaskDAO;
 import sample.Models.Task;
 import sample.MySQL;
@@ -59,12 +60,14 @@ public class CreateTaskController implements Initializable {
     };
 
     private void SaveTask(){
+        Manage manage = new Manage();
         task = new Task();
         LocalDate Date_S = DateStart.getValue();
         LocalDate Date_F = DateFinish.getValue();
         int ByFinish = Integer.parseInt(FieldEstimatedTime.getText());
         RadioButton selected = (RadioButton) togglePriority.getSelectedToggle();
         char C_priority = selected.getText().charAt(0);
+
 
         task.setTitle(FieldTitle.getText());
         task.setNotes(FieldNotes.getText());
@@ -75,7 +78,7 @@ public class CreateTaskController implements Initializable {
         task.setTags(FieldTags.getText());
         task.setCategory(FieldCategory.getText());
         task.setPriority(C_priority);
-
+        task.setUser(manage.statci_user.getUser());
         SaveTask(task);
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
