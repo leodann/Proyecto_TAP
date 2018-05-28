@@ -4,9 +4,7 @@ import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXRadioButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
@@ -16,7 +14,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
-import sample.Manage;
 import sample.Models.DAO.TaskDAO;
 import sample.Models.Task;
 import sample.MySQL;
@@ -25,14 +22,9 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
-import static java.lang.Boolean.FALSE;
-import static java.lang.Boolean.TRUE;
-
-public class InboxController implements Initializable {
+public class OnFocusController implements Initializable {
     @FXML
-    JFXListView <VBox> listView;
-    @FXML
-    Label lblTittle;
+    JFXListView<VBox> listView;
 
     private ObservableList<VBox> listVbox = FXCollections.observableArrayList();
     private ObservableList<Task> listTask = FXCollections.observableArrayList();
@@ -40,6 +32,7 @@ public class InboxController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("INIT");
         makeListVbox();
 
     }
@@ -55,17 +48,17 @@ public class InboxController implements Initializable {
             Label lblNotas = new Label(listTask.get(i).getNotes().toString());
             lblNotas.setFont(new Font("Arial",20));
             HBox hbox1 = new HBox(   new Label("Category: "+listTask.get(i).getCategory().toString()),
-                                    new Label("Tags: "+listTask.get(i).getTags().toString()),
-                                    new Label("Priority: "+Character.toString(listTask.get(i).getPriority())));
+                    new Label("Tags: "+listTask.get(i).getTags().toString()),
+                    new Label("Priority: "+Character.toString(listTask.get(i).getPriority())));
             hbox1.setSpacing(10);
             hbox1.setAlignment(Pos.CENTER);
             HBox hbox2 = new HBox(  new Label("started: "+formater.format(listTask.get(i).getStarFrom())),
-                                    new Label("finish by: "+ formater.format(listTask.get(i).getFinishBy())),
-                                    new Label("Estimated time: "+ Integer.toString(listTask.get(i).getEstimated_Time())+" hrs"));
+                    new Label("finish by: "+ formater.format(listTask.get(i).getFinishBy())),
+                    new Label("Estimated time: "+ Integer.toString(listTask.get(i).getEstimated_Time())+" hrs"));
             hbox2.setSpacing(10);
             hbox2.setAlignment(Pos.CENTER);
-            HBox hbox3 = new HBox();
 
+            HBox hbox3 = new HBox();
             hbox3.setSpacing(20);
             JFXRadioButton rb = new JFXRadioButton("Done");
             boolean bool;
@@ -107,6 +100,7 @@ public class InboxController implements Initializable {
                 }
             });
             hbox3.getChildren().addAll(rb,rbF);
+
             vbox.getChildren().addAll(lblTitulo,lblNotas,hbox1,hbox2,hbox3);
             vbox.setAccessibleText(""+i);
             listVbox.add(vbox);
@@ -115,7 +109,9 @@ public class InboxController implements Initializable {
     }
 
     private ObservableList initTaskList(){
-        listTask = taskDao.fetchAll();
+        System.out.println("listTask");
+        listTask = taskDao.fetchFocus();
+
         return listTask;
     }
 
@@ -128,7 +124,4 @@ public class InboxController implements Initializable {
         listView.setItems(listVbox);
         return listView;
     }
-
-
-
 }

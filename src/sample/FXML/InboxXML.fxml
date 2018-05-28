@@ -11,7 +11,7 @@
 <BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
             prefHeight="579.0" prefWidth="919.0" fx:controller="sample.Controllers.InboxController">
     <top>
-        <Label text="INBOX" BorderPane.alignment="CENTER">
+        <Label fx:id="lblTittle" text="INBOX" BorderPane.alignment="CENTER">
             <font>
                 <Font size="50"/>
             </font>

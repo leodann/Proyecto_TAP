@@ -94,6 +94,14 @@
     </left>
     <center>
         <BorderPane fx:id="Center">
+            <top>
+                <Label fx:id="lblTittle" text="   "/>
+            </top>
+            <center>
+                <JFXListView fx:id="listView">
+
+                </JFXListView>
+            </center>
 
         </BorderPane>
     </center>

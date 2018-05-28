@@ -1,26 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Separator?>
-<AnchorPane prefHeight="181.0" prefWidth="365.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SearchController">
-   <children>
+<AnchorPane prefHeight="311.0" prefWidth="397.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.SearchController">
+
+
+
+    <children>
       <Label layoutX="144.0" layoutY="7.0" text="Search a Task" />
-      <JFXTextField fx:id="tfSearch" layoutX="14.0" layoutY="61.0" promptText="search" />
-       <JFXButton fx:id="btnSearch" layoutX="184.0" layoutY="73.0" text="" />
-             <FontAwesomeIconView glyphName="SEARCH" glyphSize="15" layoutX="189.0" layoutY="80.0" />
-      <VBox layoutX="221.0" layoutY="40.0" prefHeight="127.0" prefWidth="135.0" spacing="25">
-          <Label fx:id="lblCategory" text="Category"/>
-          <Separator orientation="HORIZONTAL"/>
-          <Label fx:id="lblTags" text="Tags"/>
-          <Separator orientation="HORIZONTAL"/>
-          <Label fx:id="lblPriority" text="Priority"/>
-          <Separator orientation="VERTICAL"/>
-      </VBox>
+
+       <JFXTextField fx:id="tfSearch" layoutX="14.0" layoutY="61.0" prefHeight="31.0" prefWidth="157.0" promptText="search" />
+
+       <JFXButton fx:id="btnSearch" contentDisplay="TOP" layoutX="166.0" layoutY="39.0" prefHeight="68.0" prefWidth="72.0" text=" ">
+             <graphic>
+                 <FontAwesomeIconView glyphName="SEARCH" glyphSize="15" layoutX="190.0" layoutY="81.0" wrappingWidth="16.928571701049805" />
+             </graphic>
+       </JFXButton>
+
+        <fx:define>
+
+            <ToggleGroup fx:id="toggleSearch" />
+
+        </fx:define>
+
+        <VBox layoutX="248.0" layoutY="41.0" prefHeight="127.0" prefWidth="135.0" spacing="25">
+
+
+
+            <JFXRadioButton text="Category" textAlignment="LEFT" toggleGroup="$toggleSearch"/>
+
+            <Separator orientation="HORIZONTAL" />
+
+            <JFXRadioButton text="Tags" textAlignment="LEFT" toggleGroup="$toggleSearch" />
+
+            <Separator orientation="HORIZONTAL" />
+
+            <JFXRadioButton text="Priority" textAlignment="LEFT" toggleGroup="$toggleSearch" />
+
+            <Separator orientation="HORIZONTAL" />
+
+            <JFXRadioButton text="Tittle" textAlignment="LEFT" toggleGroup="$toggleSearch" />
+
+            <Separator orientation="HORIZONTAL" />
+        </VBox>
+      <Label layoutX="14.0" layoutY="249.0" prefHeight="48.0" prefWidth="169.0" text="Default search by tittle">
+          <font>
+              <Font size="10" />
+          </font>
+      </Label>
    </children>
 </AnchorPane>

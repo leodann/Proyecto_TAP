@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.text.Font?>
 <?import com.jfoenix.controls.JFXListView?>
-<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            prefHeight="579.0" prefWidth="919.0"
-            fx:controller="sample.Controllers.OnFocusController">
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Controllers.TasksFoundContrller"
+            prefHeight="400.0" prefWidth="600.0">
+
     <top>
-        <Label text="OnFocus" BorderPane.alignment="CENTER">
+        <Label fx:id="lblTittle" text="INBOX" BorderPane.alignment="CENTER">
             <font>
                 <Font size="50"/>
             </font>
