@@ -65,7 +65,7 @@
          </left>
          <right>
             <HBox>
-                <JFXButton contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="GitHub">
+                <JFXButton fx:id="btnGit" contentDisplay="TOP" prefHeight="141.0" prefWidth="162.5" text="GitHub">
                     <graphic>
                         <MaterialDesignIconView fill="1194ab" glyphName="GITHUB_CIRCLE" glyphSize="30" />
                     </graphic>
