@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/DrawerXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/DrawerXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Main_a.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Main_a.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/FXML/Search.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/Search.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Manage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Manage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/LogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/FXML/SignUp.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/FXML/SignUp.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Models/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Models/Task.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,17 +74,36 @@
       <file leaf-file-name="TaskDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="320">
+              <caret line="407" column="14" lean-forward="true" selection-start-line="407" selection-start-column="14" selection-end-line="407" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Manage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Manage.java">
+      <file leaf-file-name="SignUp.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/FXML/SignUp.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="102">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file leaf-file-name="LogIn.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/LogIn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TodayController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/TodayController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="112" column="66" selection-start-line="112" selection-start-column="66" selection-end-line="112" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,20 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateTaskController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java">
+      <file leaf-file-name="Next7DaysController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="1286">
+              <caret line="112" column="68" lean-forward="true" selection-start-line="112" selection-start-column="68" selection-end-line="112" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,25 +163,16 @@
         <option value="$PROJECT_DIR$/src/sample/Controllers/ToolTipBarControllerR.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/ToolTipBarR.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/ToolTipBarControllerL.java" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/SignUp.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Task.fxml" />
         <option value="$PROJECT_DIR$/src/sample/MySQL.java" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/SignUp.java" />
-        <option value="$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/CreateTask.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/InboxXML.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Next7Days.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Today.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Calendar.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/InboxController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/CalendarController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/TodayController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/OnFocusController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/LogIn.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/TasksFound.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/TasksFoundContrller.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/DrawerXML.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Main_a.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/SearchController.java" />
@@ -189,7 +183,17 @@
         <option value="$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Manage.java" />
+        <option value="$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/CalendarController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/InboxController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/OnFocusController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/PrintController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/TasksFoundContrller.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/TodayController.java" />
         <option value="$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/SignUp.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/LogIn.java" />
       </list>
     </option>
   </component>
@@ -558,7 +562,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527470736596</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="comiteado90">
+      <created>1527472121026</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1527472121026</updated>
+    </task>
+    <task id="LOCAL-00027" summary="'busquedas por usuario lista'">
+      <created>1527476012510</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1527476012510</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -575,7 +593,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -590,7 +607,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16927083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1829427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -669,7 +686,9 @@
     <MESSAGE value="Cada vez más cerca." />
     <MESSAGE value="Cada vez más cerca. x2" />
     <MESSAGE value="Merge branch 'master' of https://github.com/leodann/Proyecto_TAP&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/Proyecto_TAP/sample/Main.class&#10;#&#9;src/sample/Controllers/ControllerMain_a.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/leodann/Proyecto_TAP&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/Proyecto_TAP/sample/Main.class&#10;#&#9;src/sample/Controllers/ControllerMain_a.java" />
+    <MESSAGE value="comiteado90" />
+    <MESSAGE value="'busquedas por usuario lista'" />
+    <option name="LAST_COMMIT_MESSAGE" value="'busquedas por usuario lista'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -731,25 +750,10 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/MainScene.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/Task.fxml" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/SignUp.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-769">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/MySQL.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/SignUp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
@@ -781,19 +785,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/OnFocusController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#makeListVbox#0;class#OnFocusController#0" />
-            <element signature="method#initTaskList#0;class#OnFocusController#0" />
-            <element signature="method#initListView#0;class#OnFocusController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/OnFocus.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -801,47 +792,6 @@
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="103" column="74" selection-start-line="103" selection-start-column="74" selection-end-line="103" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CalendarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="128" column="82" selection-start-line="128" selection-start-column="82" selection-end-line="128" selection-end-column="82" />
-          <folding>
-            <element signature="method#Alert#0;class#CalendarController#0" />
-            <element signature="method#getStringMonth#0;class#CalendarController#0" />
-            <element signature="method#getStringDay#0;class#CalendarController#0" />
-            <element signature="method#getStringYear#0;class#CalendarController#0" />
-            <element signature="method#initCalendarlbls#0;class#CalendarController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/TodayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="102" column="74" selection-start-line="102" selection-start-column="74" selection-end-line="102" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/LogIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="65" column="55" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/TasksFound.fxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -858,19 +808,6 @@
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/TasksFoundContrller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#TasksFoundContrller#0" />
-            <element signature="method#makeListVbox#0;class#TasksFoundContrller#0" />
-            <element signature="method#initListView#0;class#TasksFoundContrller#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/Next7Days.fxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -927,23 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="232" column="54" lean-forward="true" selection-start-line="232" selection-start-column="54" selection-end-line="232" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Models/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -961,24 +881,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/InboxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="82" column="44" lean-forward="true" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Models/Task.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/PrintController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="124" column="28" selection-start-line="124" selection-start-column="28" selection-end-line="124" selection-end-column="28" />
+          <folding>
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#925#926#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -992,17 +903,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="739">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateTaskController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/UserDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+        <state relative-caret-position="3791">
+          <caret line="226" column="46" lean-forward="true" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CalendarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="145" column="74" selection-start-line="145" selection-start-column="46" selection-end-line="145" selection-end-column="74" />
+          <folding>
+            <element signature="method#Alert#0;class#CalendarController#0" />
+            <element signature="method#getStringMonth#0;class#CalendarController#0" />
+            <element signature="method#getStringDay#0;class#CalendarController#0" />
+            <element signature="method#getStringYear#0;class#CalendarController#0" />
+            <element signature="method#initCalendarlbls#0;class#CalendarController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/InboxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="123" column="40" lean-forward="true" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/SignUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/PrintController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/TasksFoundContrller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#TasksFoundContrller#0" />
+            <element signature="method#makeListVbox#0;class#TasksFoundContrller#0" />
+            <element signature="method#initListView#0;class#TasksFoundContrller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/OnFocusController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="114" column="49" selection-start-line="114" selection-start-column="49" selection-end-line="114" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initListView#0;class#OnFocusController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ControllerMain_a.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/TodayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="112" column="66" selection-start-line="112" selection-start-column="66" selection-end-line="112" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Next7DaysController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1286">
+          <caret line="112" column="68" lean-forward="true" selection-start-line="112" selection-start-column="68" selection-end-line="112" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Models/DAO/TaskDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="407" column="14" lean-forward="true" selection-start-line="407" selection-start-column="14" selection-end-line="407" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/SignUp.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/LogIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
