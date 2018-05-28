@@ -116,7 +116,8 @@ public class ControllerMain_a implements Initializable {
         stage.addEventHandler(WindowEvent.WINDOW_HIDDEN, new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                //ReloadCenterContent(namePaneCenter);
+                namePaneCenter = "../FXML/TasksFound.fxml";
+                ReloadCenterContent(namePaneCenter);
             }
         });
     }

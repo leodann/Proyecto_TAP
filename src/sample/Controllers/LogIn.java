@@ -82,9 +82,26 @@ public class LogIn implements Initializable
 
     private void Log()
     {
-        lista = userdao.findAll();
+        //lista = userdao.findAll();
+        aux = userdao.fetch(User.getText(),Password.getText());
+        if(aux!= null){
+            Manage.statci_user = aux;
+            System.out.println(""+Manage.statci_user.getUser());
+            try {
+                Parent mainscene = FXMLLoader.load(getClass().getResource("../FXML/Main_a.fxml"));
+                Stage StageP1;
+                Scene scene = new Scene(mainscene,1120,720);
+                StageP1 = Main.homeS;
+                StageP1.setScene(scene);
+                StageP1.setMaximized(true);
+                StageP1.setResizable(true);
 
-        for(int i=0; i<lista.size(); i++ )
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+
+        /*for(int i=0; i<lista.size(); i++ )
         {
             aux = lista.get(i);
             if(User.getText().compareToIgnoreCase(aux.getUser()) == 0 && Password.getText().compareToIgnoreCase(aux.getPassword()) == 0)
@@ -109,7 +126,7 @@ public class LogIn implements Initializable
             }catch (IOException e){
                 e.printStackTrace();
             }
-        }
+        }*/
         else
         {
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);

@@ -292,7 +292,7 @@ public class TaskDAO
         ObservableList<Task> task = FXCollections.observableArrayList();
         System.out.println("ONFOCUSFETCH");
         try {
-            String query = "SELECT * FROM tasks where Title = '" + title + "'" + "and User = '" +user+ "'";
+            String query = "SELECT * FROM tasks where title = '" + title + "'" + "and User = '" +user+ "'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
@@ -315,7 +315,6 @@ public class TaskDAO
             }
             rs.close();
             st.close();
-            System.out.println(task.get(0).isFocus());
 
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -327,7 +326,7 @@ public class TaskDAO
     public ObservableList<Task> fetchTags(String Tag, String user) {
         ObservableList<Task> task = FXCollections.observableArrayList();
         try {
-            String query = "SELECT * FROM tasks where Tittle = '" + Tag + "'" + "and User = '" +user+ "'";
+            String query = "SELECT * FROM tasks where tags = '" + Tag + "'" + "and User = '" +user+ "'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             Task p = null;
