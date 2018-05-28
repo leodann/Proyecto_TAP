@@ -109,7 +109,8 @@ public class Next7DaysController implements Initializable {
     }
 
     private ObservableList initTaskList(){
-        listTask = taskDao.fetchNext7();
+        Manage manage = new Manage();
+        listTask = taskDao.fetchNext7(manage.statci_user.getUser());
 
         return listTask;
     }

@@ -146,6 +146,73 @@ public class UserDAO {
     }
 
 
+    /* public ObservableList<Employee> fetchAll() {
+        ObservableList<Employee> employees = FXCollections.observableArrayList();
+        try {
+            String query = "SELECT * FROM employees limit 1000";
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(query);
+            Employee p = null;
+            while(rs.next()) {
+                p = new Employee(
+                        rs.getInt("emp_no"), rs.getDate("birth_date"),
+                        rs.getString("first_name"), rs.getString("last_name"),
+                        rs.getString("gender").charAt(0), rs.getDate("hire_date")
+                );
+                employees.add(p);
+            }
+            rs.close();
+            st.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }
+        return employees;
+    }*/
+
+    /*public User fetch(String name_user) {
+        ResultSet rs = null;
+        User e = null;
+        try {
+            String query = "SELECT * FROM users where User = '" + name_user + "'";
+            Statement st = conn.createStatement();
+            rs = st.executeQuery(query);
+            byte [] image = null;
+
+            e = new User(
+
+                    rs.getBlob("image"),
+                    //rs.getBinaryStream("image"),
+                    rs.getString("Name"),
+                    rs.getString("Adress"),
+                    rs.getString("Phone"),
+                    rs.getString(  "Mail"),
+                    rs.getString("User"),
+                    rs.getString("Password")
+
+            );
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            System.out.println("Error al recuperar información...");
+        }
+        return e;
+    }*/
+
+    /*public Boolean delete(int no_employee) {
+        try {
+            String query = "delete from employees where emp_no = ?";
+            PreparedStatement st = conn.prepareStatement(query);
+            st.setInt(1, no_employee);
+            st.execute();
+            return true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return false;
+    }
+*/
     public Boolean insert(User user) {
         try {
             String query = "insert into users "

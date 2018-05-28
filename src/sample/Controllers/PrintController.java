@@ -17,6 +17,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import sample.Manage;
 import sample.Models.DAO.TaskDAO;
 import sample.Models.Task;
 import sample.MySQL;
@@ -70,6 +71,7 @@ public class PrintController implements Initializable {
    };
 
     public void createDocument(String dest) throws IOException{
+        Manage manage = new Manage();
         Date ini = Date.from(fechainicio.getValue().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
         Date fin = Date.from(fechafin.getValue().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant());
 
@@ -84,7 +86,7 @@ public class PrintController implements Initializable {
         Table table = new Table(new float[]{6, 6, 6, 6, 6,6});
         table.setWidthPercent(100);
 
-        List<Task> List = taskDAO.findAll();
+        List<Task> List = taskDAO.findAll(manage.statci_user.getUser());
         for(int i = 0; i<List.size();i++){
 
             Task t = List.get(i);
@@ -123,6 +125,7 @@ public class PrintController implements Initializable {
 
 
     public void createDocumentall(String dest) throws IOException{
+        Manage manage = new Manage();
         PdfWriter writer = new PdfWriter(dest);
         PdfDocument pdf = new PdfDocument(writer);
 
@@ -134,7 +137,7 @@ public class PrintController implements Initializable {
         Table table = new Table(new float[]{6, 6, 6, 6, 6,6});
         table.setWidthPercent(100);
 
-        List<Task> List = taskDAO.findAll();
+        List<Task> List = taskDAO.findAll(manage.statci_user.getUser());
         for(int i = 0; i<List.size();i++){
 
             Task t = List.get(i);

@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import sample.Manage;
 import sample.Models.DAO.TaskDAO;
 import sample.Models.Task;
 import sample.MySQL;
@@ -109,8 +110,9 @@ public class OnFocusController implements Initializable {
     }
 
     private ObservableList initTaskList(){
+        Manage manage = new Manage();
         System.out.println("listTask");
-        listTask = taskDao.fetchFocus();
+        listTask = taskDao.fetchFocus(manage.statci_user.getUser());
 
         return listTask;
     }

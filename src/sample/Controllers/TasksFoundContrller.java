@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import sample.Manage;
 import sample.Models.DAO.TaskDAO;
 import sample.Models.Task;
 import sample.MySQL;
@@ -110,7 +111,8 @@ public class TasksFoundContrller implements Initializable {
     }
 
     private ObservableList initTaskList(){
-        listTask = taskDao.fetchAll();
+        Manage manage = new Manage();
+        listTask = taskDao.fetchAll(manage.statci_user.getUser());
         return listTask;
     }
 
