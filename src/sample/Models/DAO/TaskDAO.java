@@ -2,6 +2,7 @@ package sample.Models.DAO;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import sample.Manage;
 import sample.Models.Task;
 import sample.Models.User;
 
@@ -36,7 +37,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 tasks.add(p);
             }
@@ -101,7 +103,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -134,7 +137,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -169,7 +173,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -203,7 +208,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -236,7 +242,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -271,7 +278,8 @@ public class TaskDAO
                         rs.getString("Category"),
                         rs.getString("Notes"),
                         rs.getBoolean("Status"),
-                        rs.getBoolean("Focus")
+                        rs.getBoolean("Focus"),
+                        rs.getString("User")
                 );
                 task.add(p);
             }
@@ -286,43 +294,11 @@ public class TaskDAO
         return task;
     }
 
-    /*public Employee fetch(String no_emp) {
-        ResultSet rs = null;
-        Employee e = null;
-        try {
-            String query = "SELECT * FROM employees where emp_no = '" + no_emp + "'";
-            Statement st = conn.createStatement();
-            rs = st.executeQuery(query);
-            e = new Employee(
-                    rs.getInt("no_emp"), rs.getDate("birth_date"),
-                    rs.getString("first_name"), rs.getString("last_name"),
-                    rs.getString("gender").charAt(0), rs.getDate("hire_date")
-            );
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            System.out.println("Error al recuperar información...");
-        }
-        return e;
-    }
-
-    public Boolean delete(int no_employee) {
-        try {
-            String query = "delete from employees where emp_no = ?";
-            PreparedStatement st = conn.prepareStatement(query);
-            st.setInt(1, no_employee);
-            st.execute();
-            return true;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return false;
-    }
-*/
     public Boolean insert(Task task) {
         try {
             String query = "insert into tasks "
-                    + " (Title, Estimated_Time, StarFrom, FinishBy, Tags, Priority, Category, Notes)"
-                    + " values (?, ?, ?, ?, ?, ?, ?, ?)";
+                    + " (Title, Estimated_Time, StarFrom, FinishBy, Tags, Priority, Category, Notes, User)"
+                    + " values (?, ?, ?, ?, ?, ?, ?, ?,?)";
             PreparedStatement st =  conn.prepareStatement(query);
 
             st.setString(  1, task.getTitle());
@@ -333,6 +309,7 @@ public class TaskDAO
             st.setString(  6, String.valueOf(task.getPriority()));
             st.setString(  7, task.getCategory());
             st.setString(  8, task.getNotes());
+            st.setString(9,task.getUser());
             st.execute();
             return true;
         } catch (Exception e) {

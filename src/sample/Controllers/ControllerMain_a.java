@@ -42,7 +42,7 @@ public class ControllerMain_a implements Initializable {
     @FXML
     BorderPane BorderPaneM;
     @FXML
-    Button btnAdd,btnSearch;
+    Button btnAdd,btnSearch, btnPrint;
     @FXML
     JFXListView<VBox> listView;
     @FXML
@@ -60,7 +60,7 @@ public class ControllerMain_a implements Initializable {
         ReloadCenterContent(namePaneCenter);
         btnAdd.setOnAction(handler);
         btnSearch.setOnAction(handler);
-
+        btnPrint.setOnAction(handler);
     }
 
     EventHandler<ActionEvent> handler = new EventHandler<ActionEvent>() {
@@ -75,6 +75,9 @@ public class ControllerMain_a implements Initializable {
             }
             if(event.getSource() == btnSearch){
                Searchstage();
+            }
+            if(event.getSource() == btnPrint){
+                Print();
             }
         }
     };
@@ -92,7 +95,7 @@ public class ControllerMain_a implements Initializable {
 
             Parent parent = loader.load();
             loader.setController(controller);
-            Scene scene = new Scene(parent, 365.0,311.0);
+            Scene scene = new Scene(parent, 465.0,320.0);
             stage.setResizable(false);
             stage.setScene(scene);
             stage.show();
@@ -214,6 +217,26 @@ public class ControllerMain_a implements Initializable {
     private void ReloadCenterContent(String name){
         System.out.println("Reload");
         BorderPaneM.setCenter(getParentCenter(name));
+    }
+
+    public void Print(){
+        Stage stage = new Stage();
+        stage.setTitle("Report");
+        stage.setResizable(false);
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/Print.fxml"));
+        PrintController controller = new PrintController();
+
+        try {
+            Parent parent = loader.load();
+            loader.setController(controller);
+            Scene scene = new Scene(parent, 600, 350);
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
