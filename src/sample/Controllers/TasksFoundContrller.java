@@ -36,6 +36,7 @@ public class TasksFoundContrller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        lblTittle.setText("Searched in "+Manage.static_search);
         makeListVbox();
 
     }
@@ -111,8 +112,23 @@ public class TasksFoundContrller implements Initializable {
     }
 
     private ObservableList initTaskList(){
-        Manage manage = new Manage();
-        listTask = taskDao.fetchAll(manage.statci_user.getUser());
+
+        switch (Manage.static_search){
+            case "title":
+                listTask = taskDao.fetchTitle(Manage.statci_user.getUser(),Manage.static_word);
+                break;
+            case "Category":
+                listTask = taskDao.fetchCategory(Manage.static_word,Manage.statci_user.getUser());
+                break;
+            case "Tags":
+                listTask = taskDao.fetchTags(Manage.static_word,Manage.statci_user.getUser());
+                break;
+            case "Priority":
+                listTask = taskDao.fetchPriority(Manage.static_word.charAt(0),Manage.statci_user.getUser());
+                break;
+        }
+        //System.out.println(listTask.get(0).getTitle());
+
         return listTask;
     }
 

@@ -36,7 +36,7 @@
         <VBox layoutX="330.0" layoutY="77.0" prefHeight="271.0" prefWidth="120.0" spacing="25">
 
 
-            <JFXRadioButton text="Category" textAlignment="LEFT">
+            <JFXRadioButton text="Category" textAlignment="LEFT" toggleGroup="$toggleSearch">
             <toggleGroup>
                <ToggleGroup fx:id="toggleSearch" />
             </toggleGroup>
@@ -53,7 +53,7 @@
 
             <Separator orientation="HORIZONTAL" />
 
-            <JFXRadioButton text="Tittle" textAlignment="LEFT" toggleGroup="$toggleSearch" />
+            <JFXRadioButton text="Title" textAlignment="LEFT" toggleGroup="$toggleSearch" />
 
             <Separator orientation="HORIZONTAL" />
         </VBox>

@@ -105,10 +105,10 @@ public class UserDAO {
         return users;
     }
 
-    public User fetch(String name_user){
+    public User fetch(String name_user,String pass){
         User e = null;
         try {
-            String query = "SELECT * FROM users where User = '" + name_user + "'";
+            String query = "SELECT * FROM users where User = '" + name_user + "' AND  password = '" +pass+"'";
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);
             User p = null;
